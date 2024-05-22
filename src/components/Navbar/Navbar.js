@@ -10,7 +10,7 @@ import logo from '../../assets/logo.svg';
 
 function Navbar() {
     return (
-        <nav className={'flex flex-row justify-between items-center px-48 bg-light-gray fixed top-[32px] w-full z-50'}>
+        <nav className={'flex flex-row justify-between items-center px-48 pt-4 pb-4 bg-light-gray fixed top-0 w-full z-50'}>
             <Link href={'/'}>
                 <Image src={logo} alt={'Logo'} />
             </Link>
