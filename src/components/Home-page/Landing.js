@@ -22,8 +22,8 @@ function Landing() {
                     </h1>
                 </div>
                 <div className={'flex flex-col items-start justify-center gap-12 w-4/5'}>
-                    <p className={'font-roboto text-black text-sm-2 leading-normal'}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    <p className={'font-roboto text-black text-xl leading-normal'}>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
                     <ButtonPrimary text={"SHOP NOW"} />
                 </div>
