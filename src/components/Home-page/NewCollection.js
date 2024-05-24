@@ -4,6 +4,7 @@ import NewCollectionCard from "@/components/NewCollection Card/NewCollectionCard
 import product1 from '../../assets/product1Png.png';
 import product2 from '../../assets/product2Png.png';
 import product3 from '../../assets/product3Png.png';
+import SquareImage from "@/components/Squares/SquareImage";
 
 function NewCollection() {
     return (
@@ -19,6 +20,7 @@ function NewCollection() {
                 <NewCollectionCard bgColor={'bg-[#CEE3F7]'} link={'Category 2'} imageUrl={product2}/>
                 <NewCollectionCard bgColor={'bg-[#FFD4D1]'} link={'Category 3'} imageUrl={product3}/>
             </div>
+            <SquareImage className="absolute left-[-30px] bottom-[30%]" />
         </section>
     );
 }
