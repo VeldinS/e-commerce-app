@@ -13,6 +13,7 @@ import stars3_5 from "@/assets/stars/stars3_5.svg";
 import stars4 from "@/assets/stars/stars4.svg";
 import stars4_5 from "@/assets/stars/stars4_5.svg";
 import stars5 from "@/assets/stars/stars5.svg";
+import Link from "next/link";
 
 export function ProductTabs() {
     const [activeTab, setActiveTab] = useState(0);
@@ -35,7 +36,7 @@ export function ProductTabs() {
             <div className="grid grid-cols-4 gap-8 w-full h-full">
                 {products && products[categories[activeTab]] ? (
                     products[categories[activeTab]].map((product) => (
-                        <div key={product.id} className="w-full h-auto flex flex-col justify-start items-center gap-4">
+                        <Link href={`/${product.name}`} key={product.id} className="w-full h-auto flex flex-col justify-start items-center gap-4">
                             <div className="w-full h-3/4 overflow-hidden">
                                 <Image
                                     src={product.image}
@@ -83,7 +84,7 @@ export function ProductTabs() {
                                     <p className={'font-audiowide text-xl text-black'}>{product.price}</p>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))
                 ) : (
                     <p className={'text-black'}>Loading products...</p>
