@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import ButtonPrimary from "@/components/Buttons/ButtonPrimary";
 
-import product3 from '../../assets/product3.png';
+import product3 from '../../../../assets/product3.png';
 import SquareImage from "@/components/Squares/SquareImage";
 
 

@@ -1,9 +1,9 @@
 import React from 'react';
-import NewCollectionCard from "@/components/NewCollection Card/NewCollectionCard";
+import NewCollectionCard from "@/components/Cards/NewCollection Card/NewCollectionCard";
 
-import product1 from '../../assets/product1Png.png';
-import product2 from '../../assets/product2Png.png';
-import product3 from '../../assets/product3Png.png';
+import product1 from '../../../../assets/product1Png.png';
+import product2 from '../../../../assets/product2Png.png';
+import product3 from '../../../../assets/product3Png.png';
 import SquareImage from "@/components/Squares/SquareImage";
 
 function NewCollection() {
