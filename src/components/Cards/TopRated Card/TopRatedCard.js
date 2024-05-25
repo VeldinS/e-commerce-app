@@ -15,15 +15,15 @@ import stars0_5 from '../../../assets/stars/stars0_5.svg';
 
 function TopRatedCard({image, rating, name, price, oldPrice}) {
     return (
-        <div className={'w-[23vw] h-[60vh] bg-black flex flex-col justify-start items-start'}>
-            <div className="w-full h-3/4 overflow-hidden">
+        <div className={'w-auto mr-4 h-auto bg-black flex flex-col justify-start items-start'}>
+            <div className="aspect-square overflow-hidden">
                 <Image
                     src={image}
                     alt={name}
                     objectFit="cover"
                 />
             </div>
-            <div className="w-full h-1/4 px-8 flex flex-col justify-center items-start bg-white">
+            <div className="w-full h-auto px-8 py-6 flex flex-col justify-center items-start bg-white">
                 <div>
                     {rating >= 0 && rating <= 0.5 && (
                         <Image src={stars0_5} alt={'Rating 0.5'} />
