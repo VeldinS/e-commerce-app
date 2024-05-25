@@ -11,7 +11,7 @@ import Link from "next/link";
 
 function Footer() {
     return (
-        <section className={'relative'}>
+        <section className={'relative mt-32'}>
             <div className={'h-[30vh] grid grid-cols-5 w-full overflow-hidden'}>
                 <Image src={footerImage1} alt={'Footer image.'} className={'h-full w-full'} />
                 <Image src={footerImage2} alt={'Footer image.'} className={'h-full w-full'} />
