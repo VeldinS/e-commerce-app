@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import NewCollection from "@/components/Pages/Home-page/Sections/NewCollection";
 import BestSell from "@/components/Pages/Home-page/Sections/BestSell";
 import TopProducts from "@/components/Pages/Home-page/Sections/TopProducts";
+import ProductsCategories from "@/components/Pages/Home-page/Sections/ProductsCategories";
 
 function Home() {
     return (
@@ -13,6 +14,7 @@ function Home() {
             <NewCollection />
             <BestSell />
             <TopProducts />
+            <ProductsCategories />
         </div>
     );
 }
