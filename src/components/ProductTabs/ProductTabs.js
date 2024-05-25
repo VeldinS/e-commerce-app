@@ -23,8 +23,8 @@ export function ProductTabs() {
                 {categories.map((category, index) => (
                     <button
                         key={index}
-                        className={`navlink-wrapper font-audiowide text-black text-sm-4 leading-normal uppercase ${
-                            activeTab === index ? 'underline' : 'no-underline'
+                        className={`navlink-wrapper font-audiowide text-black text-lg leading-normal uppercase ${
+                            activeTab === index ? 'border-b-2 border-black' : 'border-none'
                         }`}
                         onClick={() => setActiveTab(index)}
                     >
