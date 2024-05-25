@@ -6,6 +6,7 @@ import BestSell from "@/components/Pages/Home-page/Sections/BestSell";
 import TopProducts from "@/components/Pages/Home-page/Sections/TopProducts";
 import ProductsCategories from "@/components/Pages/Home-page/Sections/ProductsCategories";
 import SellOfDay from "@/components/Pages/Home-page/Sections/SellOfDay";
+import Footer from "@/components/Footer/Footer";
 
 function Home() {
     return (
@@ -17,6 +18,7 @@ function Home() {
             <TopProducts />
             <ProductsCategories />
             <SellOfDay />
+            <Footer />
         </div>
     );
 }

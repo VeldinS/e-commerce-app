@@ -7,7 +7,7 @@ import SquareImage from "@/components/Squares/SquareImage";
 
 function BestSell() {
     return (
-        <section className={'h-screen py-16 bg-white px-56 flex relative flex-row justify-center items-center gap-16'}>
+        <section className={'h-screen py-16 bg-white px-56 flex relative flex-row justify-center items-center gap-16 overflow-hidden'}>
             <div className={'w-1/2 h-4/5 bg-[#F4FFBB] rounded-tl-[256px] relative shadow-2xl overflow-hidden'}>
                 <Image src={product4} fill alt={'Product example text.'}
                        className={"rounded-bl-[256px] object-cover object-center"}

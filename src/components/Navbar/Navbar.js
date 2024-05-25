@@ -15,10 +15,10 @@ function Navbar() {
                 <Image src={logo} alt={'Logo'} />
             </Link>
             <div className={'flex flex-row justify-center items-center gap-8'}>
-                <Navlink href={'/'} text={'CATEGORY 1'} />
-                <Navlink href={'/'} text={'CATEGORY 2'} />
-                <Navlink href={'/'} text={'CATEGORY 3'} />
-                <Navlink href={'/'} text={'CATEGORY 4'} />
+                <Navlink href={'/'} text={'CATEGORY 1'} color={'text-black'} bgColor={'bg-black'} />
+                <Navlink href={'/'} text={'CATEGORY 2'} color={'text-black'} bgColor={'bg-black'} />
+                <Navlink href={'/'} text={'CATEGORY 3'} color={'text-black'} bgColor={'bg-black'} />
+                <Navlink href={'/'} text={'CATEGORY 4'} color={'text-black'} bgColor={'bg-black'} />
             </div>
             <ButtonSecondary text={"Login"} />
         </nav>

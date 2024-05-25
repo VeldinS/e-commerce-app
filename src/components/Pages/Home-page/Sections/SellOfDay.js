@@ -9,7 +9,7 @@ import Link from "next/link";
 
 function SellOfDay() {
     return (
-        <section className={'bg-[#F2DEDF] h-auto py-24 px-48 flex relative flex-row justify-between items-start gap-8'}>
+        <section className={'bg-[#F2DEDF] h-auto py-24 px-48 flex relative flex-row justify-between items-start gap-8 overflow-hidden'}>
             <div className={'w-2/5 flex flex-col items-start justify-start gap-6'}>
                 <h1 className={'font-audiowide text-black text-5xl leading-normal'}>
                     Sell of the Day
