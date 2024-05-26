@@ -7,22 +7,22 @@ import SquareImage from "@/components/Squares/SquareImage";
 
 function BestSell() {
     return (
-        <section className={'h-screen lg:py-16 py:8 bg-white xl:px-56 lg:px-24 px-10 flex relative flex-col-reverse lg:flex-row justify-center items-center lg:gap-16 gap:10 overflow-hidden'}>
-            <div className={'lg:w-1/2 w-full lg:h-4/5 h-1/2 bg-[#F4FFBB] lg:rounded-tl-[256px] rounded-tl-[0px] relative shadow-2xl overflow-hidden'}>
+        <section className={'h-screen lg:py-16 py:8 bg-white xl:px-56 lg:px-24 px-10 flex relative flex-col lg:flex-row justify-center items-center lg:gap-16 gap:4 overflow-hidden'}>
+            <div className={'lg:w-1/2 w-full lg:h-4/5 h-1/2 bg-[#F4FFBB] lg:rounded-tl-[256px] rounded-tl-[128px] relative shadow-2xl overflow-hidden md:flex hidden'}>
                 <Image src={product4} fill alt={'Product example text.'}
                        className={"rounded-bl-[256px] object-cover object-center lg:scale-100 md:scale-75 scale-75"}
                 />
             </div>
             <div className={'relative lg:w-1/2 w-full lg:h-4/5 h-1/2 flex flex-col lg:justify-start justify-center lg:items-start items-center gap-4'}>
-                <h1 className={'font-audiowide text-7xl text-black leading-tight'}>
+                <h1 className={'font-audiowide xl:text-7xl text-4xl text-black leading-tight'}>
                     Best Sell <br/> Since 2021
                 </h1>
-                <p className={'font-roboto text-black text-xl leading-normal'}>
+                <p className={'font-roboto text-black lg:text-xl text-sm leading-normal xl:text-start text-center'}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas orci quis mi convallis. Lorem
                     ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas orci quis mi convallis. Lorem
                     ipsum dolor sit amet, consectetur adipiscing elit.
                 </p>
-                <div className={'bg-[#EEE5E5] py-10 px-10 flex flex-row gap-8 lg:absolute relative lg:-bottom-10 lg:-left-1/3 lg:w-auto w-full lg:justify-center justify-between'}>
+                <div className={'bg-[#EEE5E5] py-10 px-10 md:flex flex-row gap-8 lg:absolute relative lg:-bottom-10 lg:-left-1/3 lg:w-auto w-full lg:justify-center justify-between'}>
                     <div className={'flex flex-col justify-center items-center'}>
                         <p className={'font-audiowide text-4xl text-black'}>2019</p>
                         <p className={'font-audiowide text-xl text-black'}>All founded</p>

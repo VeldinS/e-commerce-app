@@ -15,7 +15,7 @@ import stars0_5 from '../../../assets/stars/stars0_5.svg';
 
 function TopRatedCard({image, rating, name, price, oldPrice}) {
     return (
-        <div className={'w-auto mr-4 h-auto bg-black flex flex-col justify-start items-start'}>
+        <div className={'w-auto mr-4 h-auto bg-black flex flex-col xl:justify-start justify-center xl:items-start items-center'}>
             <div className="aspect-square overflow-hidden">
                 <Image
                     src={image}
@@ -23,7 +23,7 @@ function TopRatedCard({image, rating, name, price, oldPrice}) {
                     objectFit="cover"
                 />
             </div>
-            <div className="w-full h-auto px-8 py-6 flex flex-col justify-center items-start bg-white">
+            <div className="w-full h-auto xl:px-8 px-2 xl:py-6 py-2 flex flex-col justify-center items-start bg-white">
                 <div>
                     {rating >= 0 && rating <= 0.5 && (
                         <Image src={stars0_5} alt={'Rating 0.5'} />
@@ -56,10 +56,10 @@ function TopRatedCard({image, rating, name, price, oldPrice}) {
                         <Image src={stars5} alt={'Rating 5'} />
                     )}
                 </div>
-                <h1 className={'font-audiowide text-black text-3xl leading-normal'}>{name}</h1>
-                <div className={'flex flex-row items-start justify-center gap-4'}>
-                    <p className={'font-audiowide text-2xl text-gray-300 line-through'}>{oldPrice}</p>
-                    <p className={'font-audiowide text-2xl text-black'}>{price}</p>
+                <h1 className={'font-audiowide text-black xl:text-3xl text-lg leading-normal'}>{name}</h1>
+                <div className={'flex md:flex-row flex-col items-start justify-center md:gap-4 gap:0'}>
+                    <p className={'font-audiowide xl:text-2xl text-sm text-gray-300 line-through'}>{oldPrice}</p>
+                    <p className={'font-audiowide xl:text-2xl text-sm text-black'}>{price}</p>
                 </div>
             </div>
         </div>
