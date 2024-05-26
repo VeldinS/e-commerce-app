@@ -5,12 +5,12 @@ import Image from "next/image";
 import ButtonSecondary from "@/components/Buttons/ButtonSecondary";
 import Navlink from "@/components/Navlink/Navlink";
 
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/logo/logo.svg';
 
 
 function Navbar() {
     return (
-        <nav className={'flex flex-row justify-between items-center px-48 pt-4 pb-4 bg-light-gray absolute top-0 w-full z-50'}>
+        <nav className={'flex flex-row justify-between items-center px-48 pt-4 pb-4 bg-light-gray absolute top-0 w-full z-50 overflow-hidden'}>
             <Link href={'/'}>
                 <Image src={logo} alt={'Logo'} />
             </Link>
