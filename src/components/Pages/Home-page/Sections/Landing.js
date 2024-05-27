@@ -7,7 +7,7 @@ import product3 from "@/assets/product3.png";
 
 function Landing() {
     return (
-        <section className="md:h-screen h-auto bg-light-gray flex flex-col md:flex-row md:justify-between justify-center items-center md:gap-0 gap-8 p-16 overflow-hidden relative xl:px-36 lg:px-24 px-6">
+        <section className="h-screen bg-light-gray flex flex-col md:flex-row md:justify-between justify-center items-center md:gap-0 gap-8 p-16 overflow-hidden relative xl:px-36 lg:px-24 px-6">
 
             {/* Text Content */}
             <div className="md:w-1/2 w-full flex flex-col md:items-start items-center justify-center md:gap-16 gap-8">
@@ -21,7 +21,7 @@ function Landing() {
                         ALL IN ONE
                     </h1>
                 </div>
-                <div className="md:w-4/5 w-full flex flex-col md:items-start items-center justify-center md:gap-12 gap-4">
+                <div className="md:w-4/5 w-full md:flex flex-col md:items-start items-center justify-center md:gap-12 gap-4 hidden">
                     <p className="font-roboto text-black md:text-xl text-lg text-center md:text-start leading-normal">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
