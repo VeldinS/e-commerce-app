@@ -8,7 +8,7 @@ import SquareImage from "@/components/Squares/SquareImage";
 
 function NewCollection() {
     return (
-        <section className="h-auto bg-white flex flex-col items-center justify-center gap-8 py-12 md:py-24 overflow-hidden relative xl:px-36 lg:px-24 px-10">
+        <section className="h-auto bg-white flex flex-col items-center justify-center gap-8 py-12 md:py-24 overflow-hidden relative xl:px-36 lg:px-24 px-6">
             <h1 className="font-audiowide text-black text-center lg:text-7xl text-5xl">
                 New Collection
             </h1>

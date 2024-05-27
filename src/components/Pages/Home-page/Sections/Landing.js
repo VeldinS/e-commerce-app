@@ -7,7 +7,7 @@ import product3 from "@/assets/product3.png";
 
 function Landing() {
     return (
-        <section className="h-screen bg-light-gray flex flex-col md:flex-row md:justify-between justify-center items-center md:gap-0 gap-8 py-24 overflow-hidden relative xl:px-36 lg:px-24 px-6">
+        <section className="h-screen bg-light-gray flex flex-col md:flex-row md:justify-between justify-center items-center md:gap-0 gap-8 pt-16 overflow-hidden relative xl:px-36 lg:px-24 px-6">
 
             {/* Text Content */}
             <div className="md:w-1/2 w-full flex flex-col md:items-start items-center justify-center md:gap-16 gap-8">

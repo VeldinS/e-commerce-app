@@ -33,7 +33,7 @@ export function ProductTabs() {
                 ))}
             </div>
 
-            <div className="grid md:grid-cols-4 grid-cols-2 gap-8 w-full h-full">
+            <div className="grid md:grid-cols-4 grid-cols-2 md:gap-8 gap-4 w-full h-full">
                 {products && products[categories[activeTab]] ? (
                     products[categories[activeTab]].map((product) => (
                         <Link href={`/${product.name}`} key={product.id} className="w-full h-auto flex flex-col justify-start items-center md:gap-4 gap-0">

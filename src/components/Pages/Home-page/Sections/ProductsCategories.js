@@ -5,7 +5,7 @@ import SquareImage from "@/components/Squares/SquareImage";
 function ProductsCategories() {
     return (
         <section className={'h-auto md:py-24 py-8 bg-white xl:px-36 lg:px-24 px-4 flex relative flex-col md:justify-start justify-center items-center lg:gap-12 gap-6 overflow-hidden'}>
-            <h1 className={'font-audiowide lg:text-7xl text-4xl text-black md:text-start text-center'}>
+            <h1 className={'font-audiowide text-black text-center lg:text-7xl text-5xl'}>
                 Best from Each
             </h1>
             <ProductTabs />
