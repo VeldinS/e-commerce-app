@@ -28,7 +28,7 @@ function SellOfDay() {
             <Image src={product1} alt={'Product example text.'} className={'lg:absolute relative bottom-0 lg:right-[15%] right-0 md:h-2/3 sm:h-1/3 w-auto'}/>
             <SquareImage className="absolute left-[-30px] top-[50%]" />
             <SquareImage className="absolute right-[-30px] -bottom-[20%]" />
-            <SquareImage className="absolute right-[50%] top-[30%]" />
+            <SquareImage className="absolute right-[50%] top-[30%] md:flex hidden" />
             <SquareImage className="absolute right-[10%] bottom-[30%]" />
         </section>
     );

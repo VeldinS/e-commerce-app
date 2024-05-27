@@ -9,9 +9,9 @@ function ProductsCategories() {
                 Best from Each
             </h1>
             <ProductTabs />
-            <SquareImage className="absolute left-[-30px] top-[5%]" />
+            <SquareImage className="absolute left-[-30px] top-[5%] md:flex hidden" />
             <SquareImage className="absolute left-[-15px] bottom-[30%]" />
-            <SquareImage className="absolute right-[-30px] top-[0%]" />
+            <SquareImage className="absolute right-[-30px] top-[0%] md:flex hidden" />
             <SquareImage className="absolute right-[-30px] bottom-[50%]" />
             <SquareImage className="absolute right-[-30px] -bottom-[10%]" />
         </section>

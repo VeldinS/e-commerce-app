@@ -38,8 +38,8 @@ function Landing() {
                     className="object-cover object-center lg:scale-100 md:scale-75 scale-75 rounded-bl-[256px]"
                 />
                 {/* Square Image Overlays (Inside Container) */}
-                <SquareImage className="absolute left-[-30px] top-[20%]" />
-                <SquareImage className="absolute right-[-30px] top-0" />
+                <SquareImage className="absolute left-[-30px] top-[20%] md:flex hidden" />
+                <SquareImage className="absolute right-[-30px] top-0 md:flex hidden" />
             </div>
 
             {/* Square Image Overlays (Outside Container) */}
