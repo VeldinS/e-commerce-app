@@ -21,8 +21,8 @@ function Landing() {
                         ALL IN ONE
                     </h1>
                 </div>
-                <div className="md:w-4/5 w-full md:flex flex-col md:items-start items-center justify-center md:gap-12 gap-4 hidden">
-                    <p className="font-roboto text-black md:text-xl text-lg text-center md:text-start leading-normal">
+                <div className="md:w-4/5 w-full flex flex-col md:items-start items-center justify-center md:gap-12 gap-4">
+                    <p className="md:flex hidden font-roboto text-black md:text-xl text-lg text-center md:text-start leading-normal">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
                     <ButtonPrimary text="SHOP NOW" />
