@@ -18,12 +18,12 @@ import Link from "next/link";
 export function ProductTabs() {
     const [activeTab, setActiveTab] = useState(0);
     return (
-        <div className={'flex flex-col items-center justify-center w-full h-full gap-8'}>
-            <div className="flex space-x-4 mb-4 items-center justify-center gap-16"> {/* Tab Headers */}
+        <div className={'flex flex-col items-center justify-center w-full h-full lg:gap-8 gap-4'}>
+            <div className="flex space-x-4 mb-4 items-center justify-center lg:gap-16 gap-0 flex-wrap"> {/* Tab Headers */}
                 {categories.map((category, index) => (
                     <button
                         key={index}
-                        className={`navlink-wrapper font-audiowide text-black text-lg leading-normal uppercase ${
+                        className={`navlink-wrapper font-audiowide text-black lg:text-lg text-sm leading-normal uppercase mb-2 md:md-0 ${
                             activeTab === index ? 'border-b-2 border-black' : 'border-none'
                         }`}
                         onClick={() => setActiveTab(index)}
@@ -33,10 +33,10 @@ export function ProductTabs() {
                 ))}
             </div>
 
-            <div className="grid grid-cols-4 gap-8 w-full h-full">
+            <div className="grid md:grid-cols-4 grid-cols-2 gap-8 w-full h-full">
                 {products && products[categories[activeTab]] ? (
                     products[categories[activeTab]].map((product) => (
-                        <Link href={`/${product.name}`} key={product.id} className="w-full h-auto flex flex-col justify-start items-center gap-4">
+                        <Link href={`/${product.name}`} key={product.id} className="w-full h-auto flex flex-col justify-start items-center md:gap-4 gap-0">
                             <div className="w-full h-3/4 overflow-hidden">
                                 <Image
                                     src={product.image}
@@ -45,7 +45,7 @@ export function ProductTabs() {
                                     className={'aspect-square'}
                                 />
                             </div>
-                            <div className="w-full h-1/4 px-8 flex flex-col justify-center items-center bg-white gap-4">
+                            <div className="w-full h-1/4 md:px-8 px-2 flex flex-col justify-center items-center bg-white md:gap-4 gap-2">
                                 <div>
                                     {product.rating >= 0 && product.rating <= 0.5 && (
                                         <Image src={stars0_5} alt={'Rating 0.5'}/>
@@ -78,10 +78,10 @@ export function ProductTabs() {
                                         <Image src={stars5} alt={'Rating 5'}/>
                                     )}
                                 </div>
-                                <h1 className={'font-audiowide text-black text-2xl leading-normal'}>{product.name}</h1>
+                                <h1 className={'font-audiowide text-black md:text-2xl text-lg leading-normal'}>{product.name}</h1>
                                 <div className={'flex flex-row items-start justify-center gap-4'}>
-                                    <p className={'font-audiowide text-xl text-gray-300 line-through'}>{product.oldPrice}</p>
-                                    <p className={'font-audiowide text-xl text-black'}>{product.price}</p>
+                                    <p className={'font-audiowide md:text-xl text-md text-gray-300 line-through'}>{product.oldPrice}</p>
+                                    <p className={'font-audiowide md:text-xl text-md text-black'}>{product.price}</p>
                                 </div>
                             </div>
                         </Link>
