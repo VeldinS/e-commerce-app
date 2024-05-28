@@ -19,16 +19,16 @@ function Navbar() {
 
     return (
         <nav className={'flex flex-row justify-between items-center px-4 lg:px-24 pt-4 pb-4 bg-light-gray absolute top-0 w-full z-50 overflow-hidden'}>
-            <Link href={'/'}>
-                <Image src={logo} alt={'Logo'} />
+            <Link href={'/'} className={'lg:w-[200px] w-auto'}>
+                <Image src={logo} alt={'Logo'} priority={true}/>
             </Link>
             <div className="hidden lg:flex flex-row justify-center items-center gap-8"> {/* Hide on small screens */}
-                <Navlink href={'/'} text={'CATEGORY 1'} color={'text-black'} bgColor={'bg-black'} />
-                <Navlink href={'/'} text={'CATEGORY 2'} color={'text-black'} bgColor={'bg-black'} />
-                <Navlink href={'/'} text={'CATEGORY 3'} color={'text-black'} bgColor={'bg-black'} />
-                <Navlink href={'/'} text={'CATEGORY 4'} color={'text-black'} bgColor={'bg-black'} />
+                <Navlink href={'/products'} text={'CATEGORY 1'} color={'text-black'} bgColor={'bg-black'} />
+                <Navlink href={'/products'} text={'CATEGORY 2'} color={'text-black'} bgColor={'bg-black'} />
+                <Navlink href={'/products'} text={'CATEGORY 3'} color={'text-black'} bgColor={'bg-black'} />
+                <Navlink href={'/products'} text={'CATEGORY 4'} color={'text-black'} bgColor={'bg-black'} />
             </div>
-            <ButtonSecondary text={"PRODUCTS"} />
+            <ButtonSecondary text={"PRODUCTS"} link={"/products"} />
         </nav>
     );
 }

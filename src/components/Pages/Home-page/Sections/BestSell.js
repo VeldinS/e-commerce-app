@@ -9,15 +9,15 @@ function BestSell() {
     return (
         <section className={'h-screen lg:py-16 py:8 bg-white xl:px-56 lg:px-24 px-6 flex relative flex-col lg:flex-row justify-center items-center lg:gap-16 gap:4 overflow-hidden'}>
             <div className={'lg:w-1/2 w-full lg:h-4/5 h-1/2 bg-[#F4FFBB] lg:rounded-tl-[256px] rounded-tl-[128px] relative shadow-2xl overflow-hidden md:flex hidden'}>
-                <Image src={product4} fill alt={'Product example text.'}
+                <Image loading={"lazy"} src={product4} fill alt={'Product example text.'}
                        className={"rounded-bl-[256px] object-cover object-center lg:scale-100 md:scale-75 scale-75"}
                 />
             </div>
             <div className={'relative lg:w-1/2 w-full lg:h-4/5 h-1/2 flex flex-col lg:justify-start justify-center lg:items-start items-center gap-4'}>
-                <h1 className={'font-audiowide text-black text-center lg:text-7xl text-5xl'}>
+                <h1 className={'font-audiowide text-black lg:text-start text-center lg:text-7xl text-5xl'}>
                     Best Sell <br/> Since 2021
                 </h1>
-                <p className={'font-roboto text-black text-xl text-center leading-normal'}>
+                <p className={'font-roboto text-black text-xl lg:text-start text-center leading-normal'}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas orci quis mi convallis
                 </p>
                 <div className={'bg-[#EEE5E5] py-10 px-10 md:flex flex-row gap-8 lg:absolute relative lg:-bottom-10 lg:-left-1/3 lg:w-auto w-full lg:justify-center justify-between'}>

@@ -25,7 +25,7 @@ function Landing() {
                     <p className="md:flex hidden font-roboto text-black md:text-xl text-lg text-center md:text-start leading-normal">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
-                    <ButtonPrimary text="SHOP NOW" />
+                    <ButtonPrimary text="SHOP NOW" link={'/products'} />
                 </div>
             </div>
 
@@ -36,6 +36,7 @@ function Landing() {
                     alt="Product example text."
                     fill
                     className="object-cover object-center lg:scale-100 md:scale-75 scale-75 rounded-bl-[256px]"
+                    priority={true}
                 />
                 {/* Square Image Overlays (Inside Container) */}
                 <SquareImage className="absolute left-[-30px] top-[20%] md:flex hidden" />

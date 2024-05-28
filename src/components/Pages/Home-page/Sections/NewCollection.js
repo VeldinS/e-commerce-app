@@ -2,8 +2,8 @@ import React from "react";
 
 import NewCollectionCard from "@/components/Cards/NewCollection Card/NewCollectionCard";
 import product1 from "@/assets/product1Png.png";
-import product2 from "@/assets/product2Png.png";
-import product3 from "@/assets/product3Png.png";
+import product2 from "@/assets/product3Png.png";
+import product3 from "@/assets/product2Png.png";
 import SquareImage from "@/components/Squares/SquareImage";
 
 function NewCollection() {
@@ -18,16 +18,19 @@ function NewCollection() {
             <div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-6">
                 <NewCollectionCard
                     bgColor="bg-[#EAECF1]"
+                    linkUrl={'/products'}
                     link="Category 1"
                     imageUrl={product1}
                 />
                 <NewCollectionCard
                     bgColor="bg-[#CEE3F7]"
+                    linkUrl={'/products'}
                     link="Category 2"
                     imageUrl={product2}
                 />
                 <NewCollectionCard
                     bgColor="bg-[#FFD4D1]"
+                    linkUrl={'/products'}
                     link="Category 3"
                     imageUrl={product3}
                 />

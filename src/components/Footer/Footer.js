@@ -27,10 +27,10 @@ function Footer() {
             </div>
             <div className={'lg:h-[30vh] h-auto w-full py-8 flex flex-col justify-end items-center gap-8 bg-black'}>
                 <div className={'flex lg:flex-row flex-col justify-center items-center gap-8'}>
-                    <Navlink href={'/'} text={'CATEGORY 1'} color={'text-white'} bgColor={'bg-white'}/>
-                    <Navlink href={'/'} text={'CATEGORY 2'} color={'text-white'} bgColor={'bg-white'}/>
-                    <Navlink href={'/'} text={'CATEGORY 3'} color={'text-white'} bgColor={'bg-white'}/>
-                    <Navlink href={'/'} text={'CATEGORY 4'} color={'text-white'} bgColor={'bg-white'}/>
+                    <Navlink href={'/products'} text={'CATEGORY 1'} color={'text-white'} bgColor={'bg-white'}/>
+                    <Navlink href={'/products'} text={'CATEGORY 2'} color={'text-white'} bgColor={'bg-white'}/>
+                    <Navlink href={'/products'} text={'CATEGORY 3'} color={'text-white'} bgColor={'bg-white'}/>
+                    <Navlink href={'/products'} text={'CATEGORY 4'} color={'text-white'} bgColor={'bg-white'}/>
                 </div>
                 <p className={'font-audiowide'}>Copyright - All Rights Reserved</p>
             </div>
