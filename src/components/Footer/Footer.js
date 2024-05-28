@@ -19,12 +19,6 @@ function Footer() {
                 <Image src={footerImage4} alt={'Footer image.'} className={'h-full w-full'}/>
                 <Image src={footerImage5} alt={'Footer image.'} className={'h-full w-full'}/>
             </div>
-            <div
-                className={'lg:absolute static top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:w-[400px] w-full bg-white flex justify-center items-center gap-8 lg:p-8 p-4'}>
-                <Link href={'/instagram'} className={'text-black text-xl font-audiowide'}>
-                    Follow us on Instagram @
-                </Link>
-            </div>
             <div className={'lg:h-[30vh] h-auto w-full py-8 flex flex-col justify-end items-center gap-8 bg-black'}>
                 <div className={'flex lg:flex-row flex-col justify-center items-center gap-8'}>
                     <Navlink href={'/products'} text={'CATEGORY 1'} color={'text-white'} bgColor={'bg-white'}/>
@@ -33,6 +27,12 @@ function Footer() {
                     <Navlink href={'/products'} text={'CATEGORY 4'} color={'text-white'} bgColor={'bg-white'}/>
                 </div>
                 <p className={'font-audiowide'}>Copyright - All Rights Reserved</p>
+            </div>
+            <div
+                className={'lg:absolute static top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:w-[400px] w-full bg-white flex justify-center items-center gap-8 lg:p-8 p-4'}>
+                <Link href={'/instagram'} className={'text-black text-xl font-audiowide'}>
+                    Follow us on Instagram @
+                </Link>
             </div>
 
         </section>
