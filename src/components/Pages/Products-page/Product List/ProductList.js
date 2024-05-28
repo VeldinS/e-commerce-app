@@ -50,7 +50,7 @@ export function ProductList() {
                         style={{backgroundColor: activeTab === index ? category.color : 'white'}}
                         onClick={() => setActiveTab(index)}
                     >
-                        <Image src={category.image} alt={category.name} className={'lg:h-[100px] h-[60px] lg:w-auto w-[60px]'}/>
+                        <Image src={category.image} alt={category.name} className={'lg:h-[100px] h-[50px] lg:w-auto w-[60px]'}/>
                         <p className={'font-audiowide lg:text-lg text-sm tracking-widest md:flex hidden'}>{category.name}</p>
                     </div>
 
@@ -66,7 +66,7 @@ export function ProductList() {
                                     src={imagetest}
                                     alt={product.name}
                                     fill
-                                    className={'lg:scale-[0.6] scale-50'}
+                                    className={'lg:scale-[0.6] scale-75'}
                                 />
                             </div>
                             <div className="w-full h-auto md:px-8 px-2 flex flex-col justify-center items-center md:gap-4 gap-2">

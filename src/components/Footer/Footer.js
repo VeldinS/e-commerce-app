@@ -20,7 +20,7 @@ function Footer() {
                 <Image src={footerImage5} alt={'Footer image.'} className={'h-full w-full'}/>
             </div>
             <div
-                className={'lg:absolute relative top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:w-[400px] w-full bg-white flex justify-center items-center gap-8 lg:p-8 p-4'}>
+                className={'lg:absolute static top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:w-[400px] w-full bg-white flex justify-center items-center gap-8 lg:p-8 p-4'}>
                 <Link href={'/instagram'} className={'text-black text-xl font-audiowide'}>
                     Follow us on Instagram @
                 </Link>
