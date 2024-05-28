@@ -1,8 +1,9 @@
 import React from 'react';
+import Products from "@/components/Pages/Products-page/Products";
 
 function Page() {
     return (
-        <h1>PRODUCTS PAGE</h1>
+        <Products />
     );
 }
 

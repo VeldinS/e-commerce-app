@@ -10,7 +10,7 @@ import Navlink from "@/components/Navlink/Navlink";
 
 import logo from '../../assets/logo/logo.svg';
 
-function Navbar() {
+function Navbar({position}) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -18,7 +18,7 @@ function Navbar() {
     };
 
     return (
-        <nav className={'flex flex-row justify-between items-center px-4 lg:px-24 pt-4 pb-4 bg-light-gray absolute top-0 w-full z-50 overflow-hidden'}>
+        <nav className={`${position} flex flex-row justify-between items-center px-4 lg:px-24 pt-4 pb-4 bg-light-gray top-0 w-full z-50 overflow-hidden`}>
             <Link href={'/'} className={'lg:w-[200px] w-auto'}>
                 <Image src={logo} alt={'Logo'} priority={true}/>
             </Link>
