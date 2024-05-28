@@ -39,19 +39,19 @@ export function ProductList() {
     });
 
     return (
-        <div className={'flex flex-col items-center justify-center w-full h-full lg:gap-4 gap-2 py-16 xl:px-24 lg:px-12 px-2'}>
-            <div className="flex space-x-4 mb-4 items-center justify-center lg:gap-8 gap-0 flex-wrap"> {/* Tab Headers */}
+        <div className={'flex flex-col items-center justify-center w-full h-full lg:gap-4 gap-2 lg:py-16 py-8 xl:px-24 lg:px-12 px-2'}>
+            <div className="flex flex-row md:space-x-4 space-x-0 py-2 items-center bg-white w-full justify-center lg:gap-8 gap-2 flex-wrap sticky top-0 z-10"> {/* Tab Headers */}
                 {categories.map((category, index) => (
                     <div
                         key={index}
-                        className={`cursor-pointer bg-transparent flex flex-col justify-center items-center border-2 rounded-3xl py-4 px-8 navlink-wrapper font-audiowide text-black lg:text-lg text-sm leading-normal uppercase mb-2 md:md-0 ${
+                        className={`cursor-pointer bg-transparent flex flex-col justify-center items-center border-2 rounded-3xl lg:py-4 lg:px-8 py-2 px-2 navlink-wrapper font-audiowide text-black lg:text-lg text-sm leading-normal uppercase ${
                             activeTab === index ? 'border-black' : 'border-gray-400'
                         }`}
-                        style={{backgroundColor: activeTab === index ? category.color : 'transparent'}}
+                        style={{backgroundColor: activeTab === index ? category.color : 'white'}}
                         onClick={() => setActiveTab(index)}
                     >
-                        <Image src={category.image} alt={category.name} className={'h-[100px] w-auto'}/>
-                        <p className={'font-audiowide text-lg tracking-widest'}>{category.name}</p>
+                        <Image src={category.image} alt={category.name} className={'lg:h-[100px] h-[60px] lg:w-auto w-[60px]'}/>
+                        <p className={'font-audiowide lg:text-lg text-sm tracking-widest md:flex hidden'}>{category.name}</p>
                     </div>
 
                 ))}
