@@ -39,7 +39,7 @@ export function ProductList() {
     });
 
     return (
-        <div className={'flex flex-col items-center justify-center w-full h-full lg:gap-4 gap-2 py-16 xl:px-24 lg:px-12 px-6'}>
+        <div className={'flex flex-col items-center justify-center w-full h-full lg:gap-4 gap-2 py-16 xl:px-24 lg:px-12 px-2'}>
             <div className="flex space-x-4 mb-4 items-center justify-center lg:gap-8 gap-0 flex-wrap"> {/* Tab Headers */}
                 {categories.map((category, index) => (
                     <div
