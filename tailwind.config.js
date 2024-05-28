@@ -8,7 +8,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'light-gray': '#E0E0E0',
+        'light-orange': '#FF9900',
+        'teal':'#0099CC',
+        'creamy-yellow':'#FFFDD0',
+        'deep-blue':'#004C99',
+        'lime-green':'#99CC00',
+        'olive-green':'#808000',
+        'terracotta':'#E2725B',
+        'beige':'#F5F5DC'
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

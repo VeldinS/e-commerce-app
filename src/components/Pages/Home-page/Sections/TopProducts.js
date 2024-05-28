@@ -5,9 +5,9 @@ import CarouselSlider from "@/components/Slider/CarouselSlider";
 
 function TopProducts() {
     return (
-        <section className={'bg-[#F2DEDF] xl:h-[80vh] h-auto py-24 xl:px-36 lg:px-24 px-6 flex relative xl:flex-row flex-col xl:justify-start justify-center xl:items-start items-center gap-8 overflow-hidden'}>
+        <section className={'bg-blue-300 xl:h-[80vh] h-auto py-24 xl:px-36 lg:px-24 px-6 flex relative xl:flex-row flex-col xl:justify-start justify-center xl:items-start items-center gap-8 overflow-hidden'}>
             <div className={'xl:w-2/5 w-full flex flex-col xl:items-start items-center justify-start xl:gap-12 gap-6'}>
-                    <h1 className={'font-audiowide text-black lg:text-start text-center lg:text-7xl text-5xl'}>
+                    <h1 className={'font-audiowide text-black lg:text-start text-center lg:text-6xl text-5xl'}>
                         Top Rated
                         <br/>
                         PRODUCTS

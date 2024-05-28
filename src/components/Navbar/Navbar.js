@@ -28,7 +28,7 @@ function Navbar({position}) {
                 <Navlink href={'/products'} text={'CATEGORY 3'} color={'text-black'} bgColor={'bg-black'} />
                 <Navlink href={'/products'} text={'CATEGORY 4'} color={'text-black'} bgColor={'bg-black'} />
             </div>
-            <ButtonSecondary text={"PRODUCTS"} link={"/products"} />
+            <ButtonSecondary text={"CONTACT"} link={"/contact"} />
         </nav>
     );
 }

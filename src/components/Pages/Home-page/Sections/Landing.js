@@ -3,11 +3,11 @@ import Image from "next/image";
 
 import ButtonPrimary from "@/components/Buttons/ButtonPrimary";
 import SquareImage from "@/components/Squares/SquareImage";
-import product3 from "@/assets/product3.png";
+import product3 from "@/assets/product1Png.png";
 
 function Landing() {
     return (
-        <section className="h-screen bg-light-gray flex flex-col md:flex-row md:justify-between justify-center items-center md:gap-0 gap-8 p-16 overflow-hidden relative xl:px-36 lg:px-24 px-6">
+        <section className="h-screen bg-beige flex flex-col md:flex-row md:justify-between justify-center items-center md:gap-0 gap-8 p-16 overflow-hidden relative xl:px-36 lg:px-24 px-6">
 
             {/* Text Content */}
             <div className="md:w-1/2 w-full flex flex-col md:items-start items-center justify-center md:gap-16 gap-8">
@@ -30,12 +30,12 @@ function Landing() {
             </div>
 
             {/* Image Container */}
-            <div className="md:w-1/2 w-full lg:h-3/4 h-1/2 bg-[#FFBBB8] relative lg:rounded-bl-[256px] rounded-bl-[128px]">
+            <div className="md:w-1/2 w-full lg:h-3/4 h-1/2 bg-blue-100 relative lg:rounded-bl-[256px] rounded-bl-[128px]">
                 <Image
                     src={product3}
                     alt="Product example text."
-                    fill
-                    className="object-cover object-center lg:scale-100 md:scale-75 scale-75 rounded-bl-[256px]"
+                    className="object-center scale-[0.6]"
+                    layout={'fill'}
                     priority={true}
                 />
                 {/* Square Image Overlays (Inside Container) */}

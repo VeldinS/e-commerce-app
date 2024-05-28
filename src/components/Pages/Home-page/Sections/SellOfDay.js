@@ -4,7 +4,7 @@ import React, {useEffect, useState} from 'react';
 import ButtonPrimary from "@/components/Buttons/ButtonPrimary";
 import Countdown from "@/components/Countdown/Countdown";
 import Image from "next/image";
-import product1 from '../../../../assets/product2.png'
+import product1 from '../../../../assets/product3.png'
 import SquareImage from "@/components/Squares/SquareImage";
 import Link from "next/link";
 import {fetchSpecificProducts} from "@/lib/actions";
@@ -22,7 +22,7 @@ function SellOfDay() {
     }, []);
 
     return (
-        <section className={'bg-[#F2DEDF] h-auto py-24 xl:px-48 lg:px-24 px-6 flex relative lg:flex-row flex-col justify-between lg:items-start items-center gap-8 overflow-hidden'}>
+        <section className={'bg-terracotta h-auto py-24 xl:px-48 lg:px-24 px-6 flex relative lg:flex-row flex-col justify-between lg:items-start items-center gap-8 overflow-hidden'}>
             <div className={'lg:w-3/5 w-full flex flex-col lg:items-start items-center justify-start lg:gap-6 gap-2'}>
                 <h1 className={'font-audiowide text-black lg:text-start text-center lg:text-7xl text-5xl'}>
                     Sell of the Day

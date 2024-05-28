@@ -30,7 +30,6 @@ export async function GET(request) {
 
         const products = await productsCollection.find(filter).toArray();
 
-        console.log('Successfully retrieved products:', products);
 
         return new Response(JSON.stringify(products), {
             status: 200,
