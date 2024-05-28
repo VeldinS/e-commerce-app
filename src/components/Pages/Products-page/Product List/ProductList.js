@@ -57,7 +57,7 @@ export function ProductList() {
                 ))}
             </div>
 
-            <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 md:gap-6 gap-2 md:w-full w-auto h-full">
+            <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 md:gap-6 gap-2 w-full md:h-full h-auto">
                 {filteredProducts.map((product) => (
                         <Link style={{backgroundColor: product.color }} href={`/products/${product.id}`} key={product._id}
                               className="w-full h-auto flex flex-col justify-start items-center md:gap-2 gap-0 py-2 rounded-2xl">
