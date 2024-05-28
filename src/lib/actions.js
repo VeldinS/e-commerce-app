@@ -10,13 +10,14 @@ export const fetchProducts = async () => {
 
 export const fetchSpecificProducts = async (parameterName, parameterValue = true) => {
     try {
-        const response = await fetch(`/api/products?${parameterName}=${parameterValue}`);
+        const response = await fetch(`/api/products?filter=${encodeURIComponent(JSON.stringify({ [parameterName]: parameterValue }))}`);
         return await response.json();
     } catch (err) {
         console.error(`Error fetching products with ${parameterName}=${parameterValue}:`, err);
         throw err;
     }
 };
+
 
 
 

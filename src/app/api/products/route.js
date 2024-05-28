@@ -8,19 +8,35 @@ export async function GET(request) {
             version: ServerApiVersion.v1,
             strict: true,
             deprecationErrors: true,
-        }
+        },
     });
 
     try {
         await client.connect();
         const db = client.db("EV-goods-data");
         const productsCollection = db.collection("Products");
-        const products = await productsCollection.find({}).toArray();
-        console.log('Successfully retrieved products');
+
+        // Get and parse the filter from the query string
+        let filter = {};
+        if (request.nextUrl.searchParams.has('filter')) {
+            const rawFilter = request.nextUrl.searchParams.get('filter');
+            try {
+                filter = JSON.parse(rawFilter);
+            } catch (parseError) {
+                console.error('Error parsing filter:', parseError);
+                return new Response(JSON.stringify({ error: 'Invalid filter format' }), { status: 400 });
+            }
+        }
+
+        const products = await productsCollection.find(filter).toArray();
+
+        console.log('Successfully retrieved products:', products);
+
         return new Response(JSON.stringify(products), {
             status: 200,
-            headers: { 'content-type': 'application/json' }
+            headers: { 'content-type': 'application/json' },
         });
+
     } catch (error) {
         console.error("Error fetching products:", error);
         return new Response(JSON.stringify({ error: 'Failed to fetch products' }), { status: 500 });
@@ -28,5 +44,3 @@ export async function GET(request) {
         await client.close();
     }
 }
-
-
