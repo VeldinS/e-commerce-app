@@ -1,7 +1,7 @@
 'use client'
 
-import React, { useState } from 'react';
-import {categories, products} from "@/lib/DummyData";
+import React, { useState, useEffect } from 'react';
+import {categories} from "@/lib/DummyData";
 import Image from "next/image";
 import stars0_5 from "@/assets/stars/stars0_5.svg";
 import stars1 from "@/assets/stars/stars1.svg";
@@ -14,9 +14,30 @@ import stars4 from "@/assets/stars/stars4.svg";
 import stars4_5 from "@/assets/stars/stars4_5.svg";
 import stars5 from "@/assets/stars/stars5.svg";
 import Link from "next/link";
+import imagetest from '@/assets/product1Png.png';
+import {fetchProducts} from "@/lib/actions";
 
 export function ProductList() {
-    const [activeTab, setActiveTab] = useState(0);
+    const [activeTab, setActiveTab] = useState(null); // State for the active tab (category)
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        fetchProducts()
+            .then(setProducts)   // Update state with the fetched data
+            .catch(err => {
+                console.error("Error handling fetched products:", err);
+                // Optionally, set an error state or display an error message
+            });
+    }, []);
+
+
+    const filteredProducts = products.filter(product => {
+        // If no tab is selected (activeTab is 0), show all products
+        if (activeTab === null) return true;
+        // Otherwise, check if product category matches the selected tab's name
+        return product.category === categories[activeTab].name;
+    });
+
     return (
         <div className={'flex flex-col items-center justify-center w-full h-full lg:gap-4 gap-2 py-16 xl:px-24 lg:px-12 px-6'}>
             <div className="flex space-x-4 mb-4 items-center justify-center lg:gap-8 gap-0 flex-wrap"> {/* Tab Headers */}
@@ -37,16 +58,15 @@ export function ProductList() {
             </div>
 
             <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 md:gap-6 gap-2 w-full h-full">
-                {products && products[categories[activeTab].name] ? (
-                    products[categories[activeTab].name].map((product) => (
-                        <Link style={{backgroundColor: product.color }} href={`/products/${product.id}`} key={product.id}
+                {filteredProducts.map((product) => (
+                        <Link style={{backgroundColor: product.color }} href={`/products/${product.id}`} key={product._id}
                               className="w-full h-auto flex flex-col justify-start items-center md:gap-2 gap-0 py-2 rounded-2xl">
                             <div className="w-full sm:h-[300px] h-[200px] overflow-hidden relative">
                                 <Image
-                                    src={product.image}
+                                    src={imagetest}
                                     alt={product.name}
-                                    fill
-                                    className={'lg:scale-75 scale-50'}
+                                    layout={'fill'}
+                                    className={'lg:scale-[0.6] scale-50'}
                                 />
                             </div>
                             <div className="w-full h-auto md:px-8 px-2 flex flex-col justify-center items-center md:gap-4 gap-2">
@@ -84,15 +104,12 @@ export function ProductList() {
                                 </div>
                                 <h1 className={'font-audiowide text-black md:text-2xl text-lg leading-normal'}>{product.name}</h1>
                                 <div className={'flex flex-row items-start justify-center gap-4'}>
-                                    <p className={'font-audiowide md:text-xl text-md text-gray-500 line-through'}>{product.oldPrice}</p>
+                                    <p className={'font-audiowide md:text-xl text-md text-gray-500 line-through'}>{product.old_price}</p>
                                     <p className={'font-audiowide md:text-xl text-md text-black'}>{product.price}</p>
                                 </div>
                             </div>
                         </Link>
-                    ))
-                ) : (
-                    <p className={'text-black'}>Loading products...</p>
-                )}
+                    ))}
             </div>
         </div>
     );

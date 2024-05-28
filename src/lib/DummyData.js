@@ -9,29 +9,29 @@ import category4 from '../assets/product4Png.png';
 
 export const categories = [
     {
-        name: 'Category1',
+        name: 'category1',
         image: category1,
         color: '#EAECF1'
     },
     {
-        name: 'Category2',
+        name: 'category2',
         image: category2,
         color: '#CEE3F7'
     },
     {
-        name: 'Category3',
+        name: 'category3',
         image: category3,
         color: '#FFD4D1'
     },
     {
-        name: 'Category4',
+        name: 'category4',
         image: category4,
         color: '#F4FFBB'
     }
 ];
 
 export const products = {
-    Category1: [
+    category1: [
         { id: 1, name: 'Product 1', price: '120KM', oldPrice: '250KM', rating: '1.8', image: product1,color: '#F4FFBB' },
         { id: 2, name: 'Product 2', price: '220KM', oldPrice: '300KM', rating: '4.2', image: product2, color: '#EAECF1' },
         { id: 3, name: 'Product 3', price: '100KM', oldPrice: '210KM', rating: '4.9', image: product3, color: '#FFD4D1' },
@@ -41,7 +41,7 @@ export const products = {
         { id: 7, name: 'Product 7', price: '120KM', oldPrice: '250KM', rating: '1.8', image: product1, color: '#EAECF1' },
         { id: 8, name: 'Product 8', price: '100KM', oldPrice: '210KM', rating: '4.9', image: product3, color: '#F4FFBB' },
     ],
-    Category2: [
+    category2: [
         { id: 9, name: 'Product 1', price: '220KM', oldPrice: '300KM', rating: '4.2', image: product2, color: '#EAECF1' },
         { id: 10, name: 'Product 2', price: '320KM', oldPrice: '450KM', rating: '3.6', image: product4, color: '#FFD4D1' },
         { id: 11, name: 'Product 3', price: '120KM', oldPrice: '250KM', rating: '1.8', image: product1, color: '#F4FFBB' },
@@ -51,7 +51,7 @@ export const products = {
         { id: 15, name: 'Product 7', price: '100KM', oldPrice: '210KM', rating: '4.9', image: product3, color: '#F4FFBB' },
         { id: 16, name: 'Product 8', price: '320KM', oldPrice: '450KM', rating: '3.6', image: product4, color: '#EAECF1' },
     ],
-    Category3: [
+    category3: [
         { id: 17, name: 'Product 2', price: '220KM', oldPrice: '300KM', rating: '4.2', image: product2, color: '#FFD4D1' },
         { id: 18, name: 'Product 2', price: '320KM', oldPrice: '450KM', rating: '3.6', image: product4, color: '#CEE3F7' },
         { id: 19, name: 'Product 3', price: '120KM', oldPrice: '250KM', rating: '1.8', image: product1, color: '#F4FFBB' },
@@ -61,7 +61,7 @@ export const products = {
         { id: 23, name: 'Product 7', price: '100KM', oldPrice: '210KM', rating: '4.9', image: product3, color: '#EAECF1' },
         { id: 24, name: 'Product 8', price: '120KM', oldPrice: '250KM', rating: '1.8', image: product1, color: '#CEE3F7' },
     ],
-    Category4: [
+    category4: [
         { id: 25, name: 'Product 1', price: '320KM', oldPrice: '450KM', rating: '3.6', image: product4, color: '#EAECF1' },
         { id: 26, name: 'Product 2', price: '220KM', oldPrice: '300KM', rating: '4.2', image: product2, color: '#CEE3F7' },
         { id: 27, name: 'Product 3', price: '120KM', oldPrice: '250KM', rating: '1.8', image: product1, color: '#FFD4D1' },
@@ -73,3 +73,18 @@ export const products = {
     ],
 
 };
+
+export const fetchProductById = (productId) => {
+    // Iterate through each category
+    for (const category in products) {
+        // Iterate through each product in the category
+        for (const product of products[category]) {
+            // Check if the product id matches the given productId
+            if (product.id === productId) {
+                return product; // Return the matching product
+            }
+        }
+    }
+    return null; // Return null if no matching product is found
+};
+
