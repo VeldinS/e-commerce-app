@@ -1,8 +1,9 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import {categories, products} from "@/lib/DummyData";
 import Image from "next/image";
+import testimage from '@/assets/product2.png'
 import stars0_5 from "@/assets/stars/stars0_5.svg";
 import stars1 from "@/assets/stars/stars1.svg";
 import stars1_5 from "@/assets/stars/stars1_5.svg";
@@ -14,9 +15,29 @@ import stars4 from "@/assets/stars/stars4.svg";
 import stars4_5 from "@/assets/stars/stars4_5.svg";
 import stars5 from "@/assets/stars/stars5.svg";
 import Link from "next/link";
+import {fetchProducts} from "@/lib/actions";
 
 export function ProductTabs() {
-    const [activeTab, setActiveTab] = useState(0);
+
+    const [activeTab, setActiveTab] = useState(0); // State for the active tab (category)
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        fetchProducts()
+            .then(setProducts)   // Update state with the fetched data
+            .catch(err => {
+                console.error("Error handling fetched products:", err);
+                // Optionally, set an error state or display an error message
+            });
+    }, []);
+
+    const filteredProducts = products.filter(product => {
+        // If no tab is selected (activeTab is 0), show all products
+        if (activeTab === null) return true;
+        // Otherwise, check if product category matches the selected tab's name
+        return product.category === categories[activeTab].name;
+    });
+
     return (
         <div className={'flex flex-col items-center justify-center w-full h-full lg:gap-8 gap-4'}>
             <div className="flex space-x-4 mb-4 items-center justify-center lg:gap-16 gap-0 flex-wrap"> {/* Tab Headers */}
@@ -34,12 +55,11 @@ export function ProductTabs() {
             </div>
 
             <div className="grid md:grid-cols-4 grid-cols-2 md:gap-8 gap-4 w-full h-full">
-                {products && products[categories[activeTab].name] ? (
-                    products[categories[activeTab].name].map((product) => (
-                        <Link href={`/products/${product.id}`} key={product.id} className="w-full h-auto flex flex-col justify-start items-center md:gap-4 gap-0">
+                {filteredProducts.map((product) => (
+                    <Link href={`/products/${product._id}`} key={product._id} className="w-full h-auto flex flex-col justify-start items-center md:gap-4 gap-0">
                             <div className="w-full h-3/4 overflow-hidden">
                                 <Image
-                                    src={product.image}
+                                    src={testimage}
                                     alt={product.name}
                                     objectFit="cover"
                                     className={'aspect-square'}
@@ -80,15 +100,12 @@ export function ProductTabs() {
                                 </div>
                                 <h1 className={'font-audiowide text-black md:text-2xl text-lg leading-normal'}>{product.name}</h1>
                                 <div className={'flex flex-row items-start justify-center gap-4'}>
-                                    <p className={'font-audiowide md:text-xl text-md text-gray-300 line-through'}>{product.oldPrice}</p>
+                                    <p className={'font-audiowide md:text-xl text-md text-gray-300 line-through'}>{product.old_price}</p>
                                     <p className={'font-audiowide md:text-xl text-md text-black'}>{product.price}</p>
                                 </div>
                             </div>
                         </Link>
-                    ))
-                ) : (
-                    <p className={'text-black'}>Loading products...</p>
-                )}
+                    ))}
             </div>
         </div>
     );
