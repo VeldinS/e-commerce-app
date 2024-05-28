@@ -61,7 +61,7 @@ export function ProductList() {
                 {filteredProducts.map((product) => (
                         <Link style={{backgroundColor: product.color }} href={`/products/${product.id}`} key={product._id}
                               className="w-full h-auto flex flex-col justify-start items-center md:gap-2 gap-0 py-2 rounded-2xl">
-                            <div className="w-full sm:h-[300px] h-[200px] overflow-hidden relative">
+                            <div className="w-full sm:h-[300px] h-[150px] overflow-hidden relative">
                                 <Image
                                     src={imagetest}
                                     alt={product.name}
