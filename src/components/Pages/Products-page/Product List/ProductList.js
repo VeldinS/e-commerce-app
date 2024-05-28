@@ -46,7 +46,7 @@ export function ProductList() {
                                     src={product.image}
                                     alt={product.name}
                                     fill
-                                    className={'scale-50'}
+                                    className={'lg:scale-75 scale-50'}
                                 />
                             </div>
                             <div className="w-full h-auto md:px-8 px-2 flex flex-col justify-center items-center md:gap-4 gap-2">
