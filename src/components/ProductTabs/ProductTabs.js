@@ -61,7 +61,6 @@ export function ProductTabs() {
                                 <Image
                                     src={testimage}
                                     alt={product.name}
-                                    objectFit="cover"
                                     className={'aspect-square'}
                                 />
                             </div>

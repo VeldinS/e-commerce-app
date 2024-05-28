@@ -1,5 +1,5 @@
 'use client'
-import React from "react";
+import React, {useState} from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore from 'swiper';
 import "swiper/css";
@@ -17,9 +17,12 @@ import Link from "next/link";
 SwiperCore.use([Autoplay, Navigation]);
 
 const CarouselSlider = () => {
+
+    const [domLoaded, setDomLoaded] = useState(false);
+
     return (
         <div className="w-full mx-auto overflow-hidden">
-            <Swiper
+                <Swiper
                 spaceBetween={2}
                 slidesPerView={3}
                 loop={true}

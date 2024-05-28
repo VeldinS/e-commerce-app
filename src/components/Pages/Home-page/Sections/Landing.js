@@ -34,7 +34,7 @@ function Landing() {
                 <Image
                     src={product3}
                     alt="Product example text."
-                    layout={'fill'}
+                    fill
                     className="object-cover object-center lg:scale-100 md:scale-75 scale-75 rounded-bl-[256px]"
                     priority={true}
                 />

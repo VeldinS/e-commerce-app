@@ -9,13 +9,11 @@ function NewCollectionCard({ bgColor,linkUrl, link, imageUrl }) {
             <Link href={`${linkUrl}`} className={'bg-white w-5/6 py-2 font-audiowide text-black  text-center text-2xl uppercase z-10 relative'}>
                 {link}
             </Link>
-            <div className="absolute bottom-50 w-full h-5/6 overflow-hidden z-0">
+            <div className="absolute bottom-50 w-full h-5/6 overflow-hidden z-0 flex items-center justify-center">
                 <Image
                     src={imageUrl}
                     alt={link}
-                    layout="fill"
-                    objectFit="contain"
-                    className={'rounded-lg scale-75'}
+                    className={'scale-[0.5]'}
                     priority={false}
                 />
             </div>

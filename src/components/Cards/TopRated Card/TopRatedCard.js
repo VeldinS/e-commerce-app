@@ -20,7 +20,6 @@ function TopRatedCard({image, rating, name, price, oldPrice}) {
                 <Image
                     src={image}
                     alt={name}
-                    objectFit="cover"
                 />
             </div>
             <div className="w-full h-auto xl:px-8 px-2 xl:py-6 py-2 flex flex-col justify-center items-start bg-white">

@@ -9,7 +9,7 @@ function BestSell() {
     return (
         <section className={'h-screen lg:py-16 py:8 bg-white xl:px-56 lg:px-24 px-6 flex relative flex-col lg:flex-row justify-center items-center lg:gap-16 gap:4 overflow-hidden'}>
             <div className={'lg:w-1/2 w-full lg:h-4/5 h-1/2 bg-[#F4FFBB] lg:rounded-tl-[256px] rounded-tl-[128px] relative shadow-2xl overflow-hidden md:flex hidden'}>
-                <Image loading={"lazy"} src={product4} layout={'fill'} alt={'Product example text.'}
+                <Image loading={"lazy"} src={product4} fill alt={'Product example text.'}
                        className={"rounded-bl-[256px] object-cover object-center lg:scale-100 md:scale-75 scale-75"}
                 />
             </div>

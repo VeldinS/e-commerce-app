@@ -1,30 +1,37 @@
-'use client'
+'use client';
 import { useState, useEffect } from 'react';
 
 function Countdown() {
-    const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+    const [timeLeft, setTimeLeft] = useState(null); // Initially null
 
     useEffect(() => {
+        const calculateTimeLeft = () => {
+            const now = new Date();
+            const tomorrow = new Date(now);
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            tomorrow.setHours(0, 0, 0, 0); // Set to midnight
+
+            const difference = tomorrow - now;
+
+            const hours = Math.floor(difference / (1000 * 60 * 60));
+            const minutes = Math.floor((difference / 1000 / 60) % 60);
+            const seconds = Math.floor((difference / 1000) % 60);
+
+            return { hours, minutes, seconds };
+        };
+
+        // Calculate initial time on the client-side
+        setTimeLeft(calculateTimeLeft());
+
         const timer = setInterval(() => {
             setTimeLeft(calculateTimeLeft());
         }, 1000);
 
         return () => clearInterval(timer);
-    }, []);
+    }, []); // Empty dependency array ensures it runs only once
 
-    function calculateTimeLeft() {
-        const now = new Date();
-        const tomorrow = new Date(now);
-        tomorrow.setDate(tomorrow.getDate() + 1);
-        tomorrow.setHours(0, 0, 0, 0); // Set to midnight
-
-        const difference = tomorrow - now;
-
-        const hours = Math.floor(difference / (1000 * 60 * 60));
-        const minutes = Math.floor((difference / 1000 / 60) % 60);
-        const seconds = Math.floor((difference / 1000) % 60);
-
-        return { hours, minutes, seconds };
+    if (!timeLeft) {
+        return null; // Don't render anything until timeLeft is calculated
     }
 
     const countHours = timeLeft.hours.toString().padStart(2, '0');

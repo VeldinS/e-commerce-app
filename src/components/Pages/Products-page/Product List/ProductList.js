@@ -65,7 +65,7 @@ export function ProductList() {
                                 <Image
                                     src={imagetest}
                                     alt={product.name}
-                                    layout={'fill'}
+                                    fill
                                     className={'lg:scale-[0.6] scale-50'}
                                 />
                             </div>
