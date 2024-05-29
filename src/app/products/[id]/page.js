@@ -26,13 +26,25 @@ function ProductDetailPage({ params }) {
     return (
         <>
             <Navbar position={'absolute'} visibility={'hidden'} buttonText={'CLOSE'} buttonLink={'/products'}/>
-            <section className={'flex flex-row bg-white w-screen h-screen'}>
-                <div style={{backgroundColor: product.color}} className={'w-1/2 h-full flex justify-center items-center relative'}>
+            <section className={'flex lg:flex-row flex-col bg-white w-screen lg:h-screen h-auto'}>
+                <div style={{backgroundColor: product.color}} className={'lg:w-1/2 w-full lg:h-full h-auto flex justify-center items-center relative'}>
                     <ImageSlider image1={product.image} image2={product.image} image3={product.image} image4={product.image}/>
                 </div>
-                <div className={'bg-white w-1/2 h-full flex flex-col items-start justify-center pl-8 gap-28'}>
+                <div className={'bg-white lg:w-1/2 w-full lg:h-full h-aut flex flex-col items-start justify-center md:px-8 px-4 lg:gap-28 gap-8 lg:py-0 py-4'}>
+                    <div className={'flex flex-row w-full justify-between lg:hidden'}>
+                        <Link href={`/products/${productId+1}`}
+                              className={'text-[#868686] font-audiowide text-lg tracking-[5px]'}
+                        >
+                            NEXT
+                        </Link>
+                        <Link href={`/products/${productId - 1}`}
+                              className={'text-[#868686] font-audiowide text-lg tracking-[5px]'}
+                        >
+                            PREV
+                        </Link>
+                    </div>
                     <Link href={`/products/${productId+1}`}
-                          className={'text-[#868686] font-audiowide text-lg tracking-[5px]'}
+                          className={'text-[#868686] font-audiowide text-lg tracking-[5px] hidden lg:flex'}
                     >
                         NEXT
                     </Link>
@@ -44,7 +56,7 @@ function ProductDetailPage({ params }) {
                             <h1 className={'text-black text-6xl font-audiowide'}>
                                 {product.name}
                             </h1>
-                            <p className={'text-black font-roboto text-md tracking-[2px] w-2/3'}>
+                            <p className={'text-black font-roboto text-md tracking-[2px] md:w-2/3 w-full'}>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas orci quis mi
                                 convallis
                             </p>
@@ -56,7 +68,7 @@ function ProductDetailPage({ params }) {
                         <ButtonPrimary text={"Add to cart"} link={"/products"}/>
                     </div>
                     <Link href={`/products/${productId - 1}`}
-                          className={'text-[#868686] font-audiowide text-lg tracking-[5px]'}
+                          className={'text-[#868686] font-audiowide text-lg tracking-[5px] hidden lg:flex'}
                     >
                         PREV
                     </Link>
