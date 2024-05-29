@@ -18,8 +18,8 @@ function SellOfDay() {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas orci quis mi convallis
                     </p>
                     <Countdown />
-                    <Link href={'/productUrl'} link={'/products'}>
-                        <ButtonPrimary text={"Check it Out!"} link={"/products"} />
+                    <Link href={'/products/3'} link={'/products/3'}>
+                        <ButtonPrimary text={"Check it Out!"} link={"/products/3"} />
                     </Link>
                 </div>
             </div>
