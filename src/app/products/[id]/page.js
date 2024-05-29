@@ -1,28 +1,26 @@
-import React from 'react';
-import {fetchProductById} from "@/lib/DummyData";
+'use client'
+import {useEffect, useState} from "react";
+import {fetchProductById} from "@/lib/actions";
 
-function ProductPage({params}) {
-
+const ProductDetailPage = ({params}) => {
     const productId = params.id;
-    const product =  fetchProductById(productId);
+    const [product, setProduct] = useState([]);
 
-    if(!product) {
-        return (
-            <>
-                <h1 className={'text-black'}>PRODUCT WITH THAT ID IS NOT FOUND!</h1>
-            </>
-        );
-    }
+    useEffect(() => {
+        fetchProductById('productId', productId)
+            .then(setProduct)
+            .catch(err => {
+                console.error("Error handling fetched products:", err);
+            });
+    }, []);
 
-    if(product){
-        return (
-            <>
-                <h1 className={'text-black'}>{product.name}</h1>
-            </>
-        );
-    }
-
-
+    return (
+        <div>
+            {product.map((product) => (
+                <h1 key={product._id} className={'text-black'}>{product.name}</h1>
+            ))}
+        </div>
+    );
 }
 
-export default ProductPage;
+export default ProductDetailPage;

@@ -74,17 +74,3 @@ export const products = {
 
 };
 
-export const fetchProductById = (productId) => {
-    // Iterate through each category
-    for (const category in products) {
-        // Iterate through each product in the category
-        for (const product of products[category]) {
-            // Check if the product id matches the given productId
-            if (product.id === productId) {
-                return product; // Return the matching product
-            }
-        }
-    }
-    return null; // Return null if no matching product is found
-};
-
