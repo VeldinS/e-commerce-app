@@ -7,7 +7,7 @@ import Image from "next/image";
 import product1 from '../../../../assets/product3.png'
 import SquareImage from "@/components/Squares/SquareImage";
 import Link from "next/link";
-import {fetchSpecificProducts} from "@/lib/actions";
+import {fetchSpecificProducts} from "@/app/api/products/route";
 
 function SellOfDay() {
 

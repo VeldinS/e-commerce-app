@@ -14,27 +14,23 @@ import stars4 from "@/assets/stars/stars4.svg";
 import stars4_5 from "@/assets/stars/stars4_5.svg";
 import stars5 from "@/assets/stars/stars5.svg";
 import Link from "next/link";
-import imagetest from '@/assets/product1Png.png';
-import {fetchProducts} from "@/lib/actions";
+import {fetchProducts} from "@/app/api/products/route";
 
 export function ProductList() {
-    const [activeTab, setActiveTab] = useState(null); // State for the active tab (category)
+    const [activeTab, setActiveTab] = useState(null);
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
         fetchProducts()
-            .then(setProducts)   // Update state with the fetched data
+            .then(setProducts)
             .catch(err => {
                 console.error("Error handling fetched products:", err);
-                // Optionally, set an error state or display an error message
             });
     }, []);
 
 
     const filteredProducts = products.filter(product => {
-        // If no tab is selected (activeTab is 0), show all products
         if (activeTab === null) return true;
-        // Otherwise, check if product category matches the selected tab's name
         return product.category === categories[activeTab].name;
     });
 
@@ -63,7 +59,7 @@ export function ProductList() {
                               className="w-full h-auto flex flex-col justify-start items-center md:gap-2 gap-0 py-2 rounded-2xl">
                             <div className="w-full sm:h-[300px] h-[150px] overflow-hidden relative">
                                 <Image
-                                    src={imagetest}
+                                    src={product.previewImg}
                                     alt={product.name}
                                     fill
                                     className={'scale-[0.6]'}

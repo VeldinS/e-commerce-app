@@ -11,7 +11,7 @@ import Footer from "@/components/Footer/Footer";
 function Home() {
     return (
         <div className={'flex w-full flex-col justify-stretch items-stretch gap-16'}>
-            <Navbar position={'absolute'}/>
+            <Navbar position={'absolute'} visibility={'flex'} buttonText={'CONTACT'} buttonLink={'/contact'}/>
             <Landing />
             <NewCollection />
             <BestSell />

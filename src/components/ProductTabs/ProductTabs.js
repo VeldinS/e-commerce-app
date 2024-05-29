@@ -15,7 +15,7 @@ import stars4 from "@/assets/stars/stars4.svg";
 import stars4_5 from "@/assets/stars/stars4_5.svg";
 import stars5 from "@/assets/stars/stars5.svg";
 import Link from "next/link";
-import {fetchProducts} from "@/lib/actions";
+import {fetchProducts} from "@/app/api/products/route";
 
 export function ProductTabs() {
 

@@ -6,7 +6,7 @@ import Footer from "@/components/Footer/Footer";
 function Products() {
     return (
         <>
-            <Navbar position={'relative'} />
+            <Navbar position={'relative'} visibility={'flex'} buttonText={'CONTACT'} buttonLink={'/contact'}/>
             <ProductList />
             <Footer />
         </>
