@@ -1,7 +1,7 @@
 'use client'
 
-import React, { useState, useEffect } from 'react';
-import {categories} from "@/lib/DummyData";
+import React, { useState } from 'react';
+import {categories, products} from "@/backend/Data";
 import Image from "next/image";
 import stars0_5 from "@/assets/stars/stars0_5.svg";
 import stars1 from "@/assets/stars/stars1.svg";
@@ -14,25 +14,9 @@ import stars4 from "@/assets/stars/stars4.svg";
 import stars4_5 from "@/assets/stars/stars4_5.svg";
 import stars5 from "@/assets/stars/stars5.svg";
 import Link from "next/link";
-import {fetchProducts} from "@/app/api/products/route";
 
 export function ProductList() {
-    const [activeTab, setActiveTab] = useState(null);
-    const [products, setProducts] = useState([]);
-
-    useEffect(() => {
-        fetchProducts()
-            .then(setProducts)
-            .catch(err => {
-                console.error("Error handling fetched products:", err);
-            });
-    }, []);
-
-
-    const filteredProducts = products.filter(product => {
-        if (activeTab === null) return true;
-        return product.category === categories[activeTab].name;
-    });
+    const [activeTab, setActiveTab] = useState(0);
 
     return (
         <div className={'flex flex-col items-center justify-center w-full h-full lg:gap-4 gap-2 lg:py-16 py-8 xl:px-24 lg:px-12 px-2'}>
@@ -54,12 +38,13 @@ export function ProductList() {
             </div>
 
             <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 md:gap-6 gap-2 w-full md:h-full h-auto">
-                {filteredProducts.map((product) => (
-                        <Link style={{backgroundColor: product.color }} href={`/products/${product._id}`} key={product._id}
+                {products && products[categories[activeTab].name] ? (
+                    products[categories[activeTab].name].map((product) => (
+                        <Link style={{backgroundColor: product.color }} href={`/products/${product.id}`} key={product.id}
                               className="w-full h-auto flex flex-col justify-start items-center md:gap-2 gap-0 py-2 rounded-2xl">
                             <div className="w-full sm:h-[300px] h-[150px] overflow-hidden relative">
                                 <Image
-                                    src={product.previewImg}
+                                    src={product.image}
                                     alt={product.name}
                                     fill
                                     className={'scale-[0.6]'}
@@ -100,12 +85,15 @@ export function ProductList() {
                                 </div>
                                 <h1 className={'font-audiowide text-black md:text-2xl text-lg leading-normal'}>{product.name}</h1>
                                 <div className={'flex flex-row items-start justify-center gap-4'}>
-                                    <p className={'font-audiowide md:text-xl text-md text-gray-500 line-through'}>{product.old_price}</p>
+                                    <p className={'font-audiowide md:text-xl text-md text-gray-500 line-through'}>{product.oldPrice}</p>
                                     <p className={'font-audiowide md:text-xl text-md text-black'}>{product.price}</p>
                                 </div>
                             </div>
                         </Link>
-                    ))}
+                    ))
+                ) : (
+                    <p className={'text-black'}>Loading products...</p>
+                )}
             </div>
         </div>
     );
