@@ -22,24 +22,26 @@ export function ProductTabs() {
 
     return (
         <div className={'flex flex-col items-center justify-center w-full h-full lg:gap-8 gap-4'}>
-            <div className="flex space-x-4 mb-4 items-center justify-center lg:gap-16 gap-0 flex-wrap"> {/* Tab Headers */}
+            <div className="flex lg:space-x-4 space-x-0 mb-4 items-center justify-center lg:gap-16 gap-2 flex-wrap"> {/* Tab Headers */}
                 {categories.map((category, index) => (
-                    <button
+                    <div
                         key={index}
-                        className={`navlink-wrapper font-audiowide text-black lg:text-lg text-sm leading-normal uppercase mb-2 md:md-0 ${
-                            activeTab === index ? 'border-b-2 border-black' : 'border-none'
+                        className={`cursor-pointer bg-transparent flex flex-col justify-center items-center border-2 rounded-3xl lg:py-4 lg:px-8 py-2 px-2 navlink-wrapper font-audiowide text-black lg:text-lg text-sm leading-normal uppercase ${
+                            activeTab === index ? 'border-black' : 'border-gray-400'
                         }`}
+                        style={{backgroundColor: activeTab === index ? category.color : 'white'}}
                         onClick={() => setActiveTab(index)}
                     >
-                        {category.name}
-                    </button>
+                        <p className={'font-audiowide lg:text-lg text-sm tracking-widest'}>{category.name}</p>
+                    </div>
                 ))}
             </div>
 
             <div className="grid md:grid-cols-4 grid-cols-2 md:gap-8 gap-4 w-full h-full">
                 {products && products[categories[activeTab].name] ? (
                     products[categories[activeTab].name].map((product) => (
-                    <Link href={`/products/${product.id}`} key={product.id} className="w-full h-auto flex flex-col justify-start items-center md:gap-4 gap-0">
+                        <Link href={`/products/${product.id}`} key={product.id}
+                              className="w-full h-auto flex flex-col justify-start items-center md:gap-4 gap-0">
                             <div style={{backgroundColor: product.color}} className="w-full h-3/4 overflow-hidden">
                                 <Image
                                     src={product.image}
@@ -47,7 +49,7 @@ export function ProductTabs() {
                                     className={'aspect-square scale-75'}
                                 />
                             </div>
-                            <div className="w-full h-1/4 md:px-8 px-2 flex flex-col justify-center items-center bg-white md:gap-4 gap-2">
+                            <div className="w-full h-auto md:px-8 px-2 md:py-0 py-2 flex flex-col justify-center items-center bg-white md:gap-4 gap-1">
                                 <div>
                                     {product.rating >= 0 && product.rating <= 0.5 && (
                                         <Image src={stars0_5} alt={'Rating 0.5'}/>
@@ -80,7 +82,7 @@ export function ProductTabs() {
                                         <Image src={stars5} alt={'Rating 5'}/>
                                     )}
                                 </div>
-                                <h1 className={'font-audiowide text-black md:text-2xl text-lg leading-normal'}>{product.name}</h1>
+                                <h1 className={'font-audiowide text-black lg:text-2xl text-lg leading-normal'}>{product.name}</h1>
                                 <div className={'flex flex-row items-start justify-center gap-4'}>
                                     <p className={'font-audiowide md:text-xl text-md text-gray-300 line-through'}>{product.oldPrice}</p>
                                     <p className={'font-audiowide md:text-xl text-md text-black'}>{product.price}</p>

@@ -19,7 +19,7 @@ function TopProducts() {
                     <ButtonTertiary text={"See More"} link={"/products"}/>
                 </div>
             </div>
-            <div className={'xl:w-3/4 w-full xl:absolute relative xl:-right-[15vw]'}>
+            <div className={'xl:w-3/4 w-[200%] xl:absolute relative xl:-right-[15vw]'}>
                 <CarouselSlider />
             </div>
             <SquareImage className="absolute left-[-30px] top-[20%]" />
