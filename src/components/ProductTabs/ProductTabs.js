@@ -40,11 +40,11 @@ export function ProductTabs() {
                 {products && products[categories[activeTab].name] ? (
                     products[categories[activeTab].name].map((product) => (
                     <Link href={`/products/${product.id}`} key={product.id} className="w-full h-auto flex flex-col justify-start items-center md:gap-4 gap-0">
-                            <div className="w-full h-3/4 overflow-hidden">
+                            <div style={{backgroundColor: product.color}} className="w-full h-3/4 overflow-hidden">
                                 <Image
                                     src={product.image}
                                     alt={product.name}
-                                    className={'aspect-square'}
+                                    className={'aspect-square scale-75'}
                                 />
                             </div>
                             <div className="w-full h-1/4 md:px-8 px-2 flex flex-col justify-center items-center bg-white md:gap-4 gap-2">

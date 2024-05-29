@@ -30,7 +30,7 @@ export function ProductList() {
                         style={{backgroundColor: activeTab === index ? category.color : 'white'}}
                         onClick={() => setActiveTab(index)}
                     >
-                        <Image src={category.image} alt={category.name} className={'lg:h-[100px] h-[50px] lg:w-auto w-[60px]'}/>
+                        <Image src={category.image} alt={category.name} className={'lg:h-[100px] h-[50px] lg:w-auto w-[60px] lg:hidden flex'}/>
                         <p className={'font-audiowide lg:text-lg text-sm tracking-widest lg:flex hidden'}>{category.name}</p>
                     </div>
 

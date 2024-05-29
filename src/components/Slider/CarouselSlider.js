@@ -18,8 +18,6 @@ SwiperCore.use([Autoplay, Navigation]);
 
 const CarouselSlider = () => {
 
-    const [domLoaded, setDomLoaded] = useState(false);
-
     return (
         <div className="w-full mx-auto overflow-hidden">
                 <Swiper

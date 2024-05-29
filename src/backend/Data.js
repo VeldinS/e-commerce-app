@@ -32,7 +32,7 @@ export const categories = [
 
 export const products = {
     category1: [
-        { id: 1, name: 'Product 1', price: '120KM', oldPrice: '250KM', rating: '1.8', image: product1,color: '#F4FFBB' },
+        { id: 1, name: 'Product 1', price: '120KM', oldPrice: '250KM', rating: '1.8', image: product1, image2: product2, image3: product3, color: '#F4FFBB' },
         { id: 2, name: 'Product 2', price: '220KM', oldPrice: '300KM', rating: '4.2', image: product2, color: '#EAECF1' },
         { id: 3, name: 'Product 3', price: '100KM', oldPrice: '210KM', rating: '4.9', image: product3, color: '#FFD4D1' },
         { id: 4, name: 'Product 4', price: '320KM', oldPrice: '450KM', rating: '3.6', image: product4, color: '#CEE3F7' },
