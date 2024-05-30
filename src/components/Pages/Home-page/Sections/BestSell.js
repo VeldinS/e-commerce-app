@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import product4 from "@/assets/product4.png";
 import SquareImage from "@/components/Squares/SquareImage";
+import RevealComp from "@/components/Animations/reveal";
 
 
 function BestSell() {
@@ -14,13 +15,18 @@ function BestSell() {
                 />
             </div>
             <div className={'relative lg:w-1/2 w-full lg:h-4/5 h-1/2 flex flex-col lg:justify-start justify-center lg:items-start items-center gap-4'}>
-                <h1 className={'font-audiowide text-black lg:text-start text-center lg:text-7xl text-5xl'}>
-                    Best Sell <br/> Since 2021
-                </h1>
-                <p className={'font-roboto text-black text-xl lg:text-start text-center leading-normal'}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas orci quis mi convallis
-                </p>
-                <div className={'bg-[#EEE5E5] py-10 px-10 md:flex flex-row gap-8 lg:absolute relative lg:-bottom-10 lg:-left-1/3 lg:w-auto w-full lg:justify-center justify-between'}>
+                <RevealComp delay={'200ms'} threshold={0.5} duration={'300ms'} x={30}>
+                    <h1 className={'font-audiowide text-black lg:text-start text-center lg:text-7xl text-5xl'}>
+                        Best Sell <br/> Since 2021
+                    </h1>
+                </RevealComp>
+                <RevealComp delay={'400ms'} threshold={0.5} duration={'300ms'} x={30}>
+                    <p className={'font-roboto text-black text-xl lg:text-start text-center leading-normal'}>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas orci quis mi convallis
+                    </p>
+                </RevealComp>
+                <div
+                    className={'bg-[#EEE5E5] py-10 px-10 md:flex flex-row gap-8 lg:absolute relative lg:-bottom-10 lg:-left-1/3 lg:w-auto w-full lg:justify-center justify-between'}>
                     <div className={'flex flex-col justify-center items-center'}>
                         <p className={'font-audiowide text-4xl text-black'}>2019</p>
                         <p className={'font-audiowide text-xl text-black'}>All founded</p>
