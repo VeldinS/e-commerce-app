@@ -27,7 +27,7 @@ function TopProducts() {
                 </div>
             </div>
             <div className={'xl:w-3/4 w-[200%] xl:absolute relative xl:-right-[15vw]'}>
-                <RevealComp delay={'300ms'} threshold={0.2} duration={'500ms'} x={500}>
+                <RevealComp delay={'300ms'} threshold={0.2} duration={'500ms'} x={200}>
                     <CarouselSlider />
                 </RevealComp>
             </div>

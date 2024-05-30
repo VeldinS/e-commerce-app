@@ -83,9 +83,14 @@ function ProductDetailPage({ params }) {
                                 </RevealComp>
                             </div>
                         </div>
-                        <RevealComp delay={'2000ms'} duration={'300ms'} threshold={0.1} x={-100}>
-                            <ButtonPrimary text={"Add to cart"} link={"/products"}/>
+                        <RevealComp delay={'2000ms'} duration={'300ms'} threshold={0} x={-100}>
+                            <div className={'hidden md:flex'}>
+                                <ButtonPrimary text={"Add to cart"} link={"/products"}/>
+                            </div>
                         </RevealComp>
+                        <div className={'flex md:hidden'}>
+                            <ButtonPrimary text={"Add to cart"} link={"/products"}/>
+                        </div>
                     </div>
                     <RevealComp delay={'600ms'} duration={'300ms'} threshold={0} x={-100}>
                         <Link href={`/products/${productId - 1}`}
