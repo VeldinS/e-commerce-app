@@ -4,33 +4,43 @@ import Image from "next/image";
 import ButtonPrimary from "@/components/Buttons/ButtonPrimary";
 import SquareImage from "@/components/Squares/SquareImage";
 import product3 from "@/assets/product1Png.png";
+import RevealComp from "@/components/Animations/reveal";
 
 function Landing() {
     return (
-        <section className="h-screen bg-beige flex flex-col md:flex-row md:justify-between justify-center items-center md:gap-0 gap-8 p-16 overflow-hidden relative xl:px-36 lg:px-24 px-6">
+        <section className="h-screen bg-beige flex flex-col md:flex-row md:justify-between justify-center items-center md:gap-0 gap-8 md:p-0 p-16 overflow-hidden relative xl:px-36 lg:px-24 px-6">
 
             {/* Text Content */}
-            <div className="md:w-1/2 w-full flex flex-col md:items-start items-center justify-center md:gap-16 gap-8">
-                <div className="flex flex-col md:items-start items-center justify-center gap-2">
-                    <h1 className="font-audiowide text-black text-center md:text-start leading-normal xl:text-5xl md:text-4xl text-3xl">
-                        The Best Store To
-                        <br />
-                        Shop Online
-                    </h1>
-                    <h1 className="font-audiowide text-black xl:text-4xl md:text-3xl text-2xl">
-                        ALL IN ONE
-                    </h1>
+                <div className="md:w-1/2 w-full flex flex-col md:items-start items-center justify-center md:gap-16 gap-8">
+                    <RevealComp duration={'300ms'} threshold={1}>
+                        <div className="flex flex-col md:items-start items-center justify-center gap-2">
+                            <h1 className="font-audiowide text-black text-center md:text-start leading-normal xl:text-5xl md:text-4xl text-3xl">
+                                The Best Store To
+                                <br/>
+                                Shop Online
+                            </h1>
+                            <h1 className="font-audiowide text-black xl:text-4xl md:text-3xl text-2xl">
+                                ALL IN ONE
+                            </h1>
+                        </div>
+                    </RevealComp>
+                    <div
+                        className="md:w-4/5 w-full flex flex-col md:items-start items-center justify-center md:gap-12 gap-4">
+                        <RevealComp duration={'600ms'} threshold={1}>
+                            <p className="md:flex hidden font-roboto text-black md:text-xl text-lg text-center md:text-start leading-normal">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit.
+                            </p>
+                        </RevealComp>
+                        <RevealComp duration={'900ms'} threshold={1}>
+                            <ButtonPrimary text="SHOP NOW" link={'/products'}/>
+                        </RevealComp>
+                    </div>
                 </div>
-                <div className="md:w-4/5 w-full flex flex-col md:items-start items-center justify-center md:gap-12 gap-4">
-                    <p className="md:flex hidden font-roboto text-black md:text-xl text-lg text-center md:text-start leading-normal">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-                    <ButtonPrimary text="SHOP NOW" link={'/products'} />
-                </div>
-            </div>
 
             {/* Image Container */}
-            <div className="md:w-1/2 w-full lg:h-3/4 h-1/2 bg-blue-100 relative lg:rounded-bl-[256px] rounded-bl-[128px]">
+            <div
+                className="md:w-1/2 w-full lg:h-3/4 h-1/2 bg-blue-100 relative lg:rounded-bl-[256px] rounded-bl-[128px]">
                 <Image
                     src={product3}
                     alt="Product example text."
