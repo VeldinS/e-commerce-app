@@ -12,7 +12,7 @@ function Landing() {
 
             {/* Text Content */}
                 <div className="md:w-1/2 w-full flex flex-col md:items-start items-center justify-center md:gap-16 gap-8">
-                    <RevealComp duration={'300ms'} threshold={1}>
+                    <RevealComp delay={'200ms'} duration={'300ms'} threshold={1}>
                         <div className="flex flex-col md:items-start items-center justify-center gap-2">
                             <h1 className="font-audiowide text-black text-center md:text-start leading-normal xl:text-5xl md:text-4xl text-3xl">
                                 The Best Store To
@@ -26,13 +26,13 @@ function Landing() {
                     </RevealComp>
                     <div
                         className="md:w-4/5 w-full flex flex-col md:items-start items-center justify-center md:gap-12 gap-4">
-                        <RevealComp duration={'600ms'} threshold={1}>
+                        <RevealComp delay={'400ms'} duration={'300ms'} threshold={1}>
                             <p className="md:flex hidden font-roboto text-black md:text-xl text-lg text-center md:text-start leading-normal">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
                                 consectetur adipiscing elit.
                             </p>
                         </RevealComp>
-                        <RevealComp duration={'900ms'} threshold={1}>
+                        <RevealComp delay={'600ms'} duration={'300ms'} threshold={1}>
                             <ButtonPrimary text="SHOP NOW" link={'/products'}/>
                         </RevealComp>
                     </div>
