@@ -21,7 +21,7 @@ function ProductDetailPage({ params }) {
     const product = findProductById(productId);
 
     if (!product) {
-        return <div>Product not found</div>;
+        return <div>Product not found!</div>;
     }
 
     return (
