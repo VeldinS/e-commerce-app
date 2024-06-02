@@ -8,7 +8,6 @@ import RevealComp from "@/components/Animations/reveal";
 
 function ProductDetailPage({ params }) {
     const productId = parseInt(params.id, 10);
-// Function to find the product by id
     const findProductById = (id) => {
         for (const category in products) {
             const product = products[category].find((product) => product.id === id);
@@ -85,11 +84,11 @@ function ProductDetailPage({ params }) {
                         </div>
                         <RevealComp delay={'2000ms'} duration={'300ms'} threshold={0} x={-100}>
                             <div className={'hidden md:flex'}>
-                                <ButtonPrimary text={"Add to cart"} link={"/products"}/>
+                                <ButtonPrimary text={"Add to cart"} link={`https://evgoods.foxycart.com/cart?name=${product.name}&price=${product.price}&code=${productId}`}/>
                             </div>
                         </RevealComp>
                         <div className={'flex md:hidden'}>
-                            <ButtonPrimary text={"Add to cart"} link={"/products"}/>
+                            <ButtonPrimary text={"Add to cart"} link={`https://evgoods.foxycart.com/cart?name=${product.name}&price=${product.price}&code=${productId}&image=${product.image}`}/>
                         </div>
                     </div>
                     <RevealComp delay={'600ms'} duration={'300ms'} threshold={0} x={-100}>
