@@ -8,8 +8,7 @@ import RevealComp from "@/components/Animations/reveal";
 
 function Landing() {
     return (
-        <section className="h-screen bg-beige flex flex-col md:flex-row md:justify-between justify-center items-center md:gap-0 gap-8 md:p-0 p-16 overflow-hidden relative xl:px-36 lg:px-24 px-6">
-
+        <section className="h-screen bg-beige flex flex-col md:flex-row md:justify-between justify-center items-center md:gap-0 gap-8 md:p-0 p-16 overflow-hidden relative xl:px-36 lg:px-24 md:px-18 px-6">
             {/* Text Content */}
                 <div className="md:w-1/2 w-full flex flex-col md:items-start items-center justify-center md:gap-16 gap-8">
                     <RevealComp delay={'200ms'} duration={'300ms'} threshold={0.3} x={-30}>
