@@ -84,11 +84,11 @@ function ProductDetailPage({ params }) {
                         </div>
                         <RevealComp delay={'2000ms'} duration={'300ms'} threshold={0} x={-100}>
                             <div className={'hidden md:flex'}>
-                                <ButtonPrimary text={"Add to cart"} link={`https://evgoods.foxycart.com/cart?name=${product.name}&image=${product.image}&price=${product.price}&code=${productId}`}/>
+                                <ButtonPrimary text={"Add to cart"} link={`https://evgoods.foxycart.com/cart?name=${product.name}&image=${product.previewImg}&price=${product.price}&code=${productId}`}/>
                             </div>
                         </RevealComp>
                         <div className={'flex md:hidden'}>
-                            <ButtonPrimary text={"Add to cart"} link={`https://evgoods.foxycart.com/cart?name=${product.name}&image=${product.image}&price=${product.price}&code=${productId}`}/>
+                            <ButtonPrimary text={"Add to cart"} link={`https://evgoods.foxycart.com/cart?name=${product.name}&image=${product.previewImg}&price=${product.price}&code=${productId}`}/>
                         </div>
                     </div>
                     <RevealComp delay={'600ms'} duration={'300ms'} threshold={0} x={-100}>

@@ -46,7 +46,7 @@ export function ProductTabs() {
                             <Link href={`/products/${product.id}`}
                                   className="w-full h-auto flex flex-col justify-start items-center md:gap-4 gap-0">
                                 <div style={{backgroundColor: product.color}} className="w-full h-3/4 overflow-hidden">
-                                    <Image
+                                    <img
                                         src={product.image}
                                         alt={product.name}
                                         className={'aspect-square scale-75'}

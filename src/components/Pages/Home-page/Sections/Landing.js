@@ -45,7 +45,7 @@ function Landing() {
                     src={product3}
                     alt="Product example text."
                     className="object-center scale-[0.6]"
-                    layout={'fill'}
+                    fill
                     priority={true}
                 />
                 {/* Square Image Overlays (Inside Container) */}
