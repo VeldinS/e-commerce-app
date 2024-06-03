@@ -14,11 +14,11 @@ function Footer() {
     return (
         <section className={'relative md:mt-32 mt-16'}>
             <div className={'h-[30vh] lg:grid hidden grid-cols-5 w-full overflow-hidden'}>
-                <Image src={footerImage1} alt={'Footer image.'} className={'h-full w-full'}/>
-                <Image src={footerImage2} alt={'Footer image.'} className={'h-full w-full'}/>
-                <Image src={footerImage3} alt={'Footer image.'} className={'h-full w-full'}/>
-                <Image src={footerImage4} alt={'Footer image.'} className={'h-full w-full'}/>
-                <Image src={footerImage5} alt={'Footer image.'} className={'h-full w-full'}/>
+                <Image src={footerImage1} alt={'Footer image'} className={'h-full w-full'}/>
+                <Image src={footerImage2} alt={'Footer image'} className={'h-full w-full'}/>
+                <Image src={footerImage3} alt={'Footer image'} className={'h-full w-full'}/>
+                <Image src={footerImage4} alt={'Footer image'} className={'h-full w-full'}/>
+                <Image src={footerImage5} alt={'Footer image'} className={'h-full w-full'}/>
             </div>
             <div
                 className={'lg:absolute relative top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 lg:w-[400px] w-full bg-white flex justify-center items-center gap-8 lg:p-8 p-4'}>
