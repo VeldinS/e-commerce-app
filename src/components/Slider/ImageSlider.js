@@ -5,7 +5,6 @@ import SwiperCore from 'swiper';
 import "swiper/css";
 import "swiper/css/navigation";
 import {Autoplay, Navigation} from "swiper/modules";
-import Image from "next/image";
 
 SwiperCore.use([Autoplay, Navigation]);
 

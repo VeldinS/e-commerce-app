@@ -1,15 +1,16 @@
 'use client';
+
 import { useState, useEffect } from 'react';
 
 function Countdown() {
-    const [timeLeft, setTimeLeft] = useState(null); // Initially null
+    const [timeLeft, setTimeLeft] = useState(null);
 
     useEffect(() => {
         const calculateTimeLeft = () => {
             const now = new Date();
             const tomorrow = new Date(now);
             tomorrow.setDate(tomorrow.getDate() + 1);
-            tomorrow.setHours(0, 0, 0, 0); // Set to midnight
+            tomorrow.setHours(0, 0, 0, 0);
 
             const difference = tomorrow - now;
 
@@ -20,7 +21,6 @@ function Countdown() {
             return { hours, minutes, seconds };
         };
 
-        // Calculate initial time on the client-side
         setTimeLeft(calculateTimeLeft());
 
         const timer = setInterval(() => {
@@ -28,10 +28,10 @@ function Countdown() {
         }, 1000);
 
         return () => clearInterval(timer);
-    }, []); // Empty dependency array ensures it runs only once
+    }, []);
 
     if (!timeLeft) {
-        return null; // Don't render anything until timeLeft is calculated
+        return null;
     }
 
     const countHours = timeLeft.hours.toString().padStart(2, '0');
