@@ -1,9 +1,11 @@
-import {products} from "@/backend/Data";
+import Link from "next/link";
+
 import Navbar from "@/components/Navbar/Navbar";
 import ImageSlider from "@/components/Slider/ImageSlider";
-import Link from "next/link";
 import ButtonPrimary from "@/components/Buttons/ButtonPrimary";
 import RevealComp from "@/components/Animations/reveal";
+
+import {products} from "@/backend/Data";
 
 
 function ProductDetailPage({ params }) {

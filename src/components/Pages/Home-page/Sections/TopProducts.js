@@ -1,8 +1,10 @@
 import React from 'react';
+
 import ButtonTertiary from "@/components/Buttons/ButtonTertiary";
 import SquareImage from "@/components/Squares/SquareImage";
 import CarouselSlider from "@/components/Slider/CarouselSlider";
 import RevealComp from "@/components/Animations/reveal";
+
 
 function TopProducts() {
     return (

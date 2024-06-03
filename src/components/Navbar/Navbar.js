@@ -3,9 +3,10 @@ import Link from "next/link";
 import Image from "next/image";
 
 import ButtonSecondary from "@/components/Buttons/ButtonSecondary";
+import RevealComp from "@/components/Animations/reveal";
 
 import logo from '../../assets/logo/logo.svg';
-import RevealComp from "@/components/Animations/reveal";
+
 
 function Navbar({position, buttonText, buttonLink}) {
 

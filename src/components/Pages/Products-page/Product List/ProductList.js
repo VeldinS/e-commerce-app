@@ -1,13 +1,17 @@
 'use client'
 
 import React, { useState } from 'react';
-import {categories, products} from "@/backend/Data";
 import Image from "next/image";
 import Link from "next/link";
+
 import RevealComp from "@/components/Animations/reveal";
 import Stars from "@/components/Stars/Stars";
 
+import {categories, products} from "@/backend/Data";
+
+
 export function ProductList() {
+
     const [activeTab, setActiveTab] = useState(0);
 
     return (

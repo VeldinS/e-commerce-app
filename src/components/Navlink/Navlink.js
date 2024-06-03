@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from "next/link";
+
 import './navlink.css';
+
 
 function Navlink(props) {
     return (
@@ -8,7 +10,6 @@ function Navlink(props) {
             <p>{props.text}</p>
             <div className={`navlink-line w-0 h-1 transition-width duration-300 ${props.bgColor}`}></div>
         </Link>
-
     );
 }
 

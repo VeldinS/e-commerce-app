@@ -1,26 +1,23 @@
 'use client'
+
 import React, from "react";
+import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
+
 import SwiperCore from 'swiper';
+import {Autoplay, Navigation} from "swiper/modules";
+import Stars from "@/components/Stars/Stars";
+
+import {products} from "@/backend/Data";
 import "swiper/css";
 import "swiper/css/navigation";
-import {Autoplay, Navigation} from "swiper/modules";
-import Link from "next/link";
-import {products} from "@/backend/Data";
-import Stars from "@/components/Stars/Stars";
 
 
 SwiperCore.use([Autoplay, Navigation]);
-
 const CarouselSlider = () => {
 
-    // Step 1: Flatten the products object
     const allProducts = Object.values(products).flat();
-
-    // Step 2: Sort the products by rating in descending order
     const sortedProducts = allProducts.sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating));
-
-    // Step 3: Get the top 6 products
     const topProducts = sortedProducts.slice(0, 6);
 
     return (

@@ -1,9 +1,10 @@
 import React from 'react';
 import Image from "next/image";
 
-import product4 from "@/assets/product4.png";
 import SquareImage from "@/components/Squares/SquareImage";
 import RevealComp from "@/components/Animations/reveal";
+
+import product4 from "@/assets/product4.png";
 
 
 function BestSell() {

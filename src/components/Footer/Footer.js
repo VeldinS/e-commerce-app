@@ -1,13 +1,14 @@
 import React from 'react';
-import Image from 'next/image'
+import Image from 'next/image';
+import Link from "next/link";
+
+import Navlink from "@/components/Navlink/Navlink";
 
 import footerImage1 from '../../assets/footer/footerImg1.png';
 import footerImage2 from '../../assets/footer/footerImg2.png';
 import footerImage3 from '../../assets/footer/footerImg3.png';
 import footerImage4 from '../../assets/footer/footerImg4.png';
 import footerImage5 from '../../assets/footer/footerImg5.png';
-import Navlink from "@/components/Navlink/Navlink";
-import Link from "next/link";
 
 function Footer() {
     return (

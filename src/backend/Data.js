@@ -1,27 +1,18 @@
-import category1 from '../assets/product1Png.png';
-import category3 from '../assets/product2Png.png';
-import category2 from '../assets/product3Png.png';
-import category4 from '../assets/product4Png.png';
-
 export const categories = [
     {
         name: 'category1',
-        image: category1,
         color: '#EAECF1'
     },
     {
         name: 'category2',
-        image: category2,
         color: '#CEE3F7'
     },
     {
         name: 'category3',
-        image: category3,
         color: '#FFD4D1'
     },
     {
         name: 'category4',
-        image: category4,
         color: '#F4FFBB'
     }
 ];
@@ -90,7 +81,8 @@ export const products = {
             image3: 'https://i.ibb.co/jV7zyg8/product2-Png.png',
             image4: 'https://i.ibb.co/jV7zyg8/product2-Png.png',
             previewImg: 'https://i.ibb.co/ZSdqpgg/product2.png',
-            color: '#F4FFBB'
+            color: '#F4FFBB',
+            sellOfDay: true
         },
         {
             id: 6,

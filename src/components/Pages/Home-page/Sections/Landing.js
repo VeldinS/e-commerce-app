@@ -3,13 +3,14 @@ import Image from "next/image";
 
 import ButtonPrimary from "@/components/Buttons/ButtonPrimary";
 import SquareImage from "@/components/Squares/SquareImage";
-import product3 from "@/assets/product1Png.png";
 import RevealComp from "@/components/Animations/reveal";
+
+import product3 from "@/assets/product1Png.png";
+
 
 function Landing() {
     return (
         <section className="h-screen bg-beige flex flex-col md:flex-row md:justify-between justify-center items-center md:gap-0 gap-8 md:p-0 p-16 overflow-hidden relative xl:px-36 lg:px-24 md:px-18 px-6">
-            {/* Text Content */}
                 <div className="md:w-1/2 w-full flex flex-col md:items-start items-center justify-center md:gap-16 gap-8">
                     <RevealComp delay={'200ms'} duration={'300ms'} threshold={0.3} x={-30}>
                         <div className="flex flex-col md:items-start items-center justify-center gap-2">
@@ -36,23 +37,18 @@ function Landing() {
                         </RevealComp>
                     </div>
                 </div>
-
-            {/* Image Container */}
-            <div
-                className="md:w-1/2 w-full lg:h-3/4 h-1/2 bg-blue-100 relative lg:rounded-bl-[256px] rounded-bl-[128px]">
-                <Image
-                    src={product3}
-                    alt="Product example text."
-                    className="object-center scale-[0.6]"
-                    fill
-                    priority={true}
-                />
-                {/* Square Image Overlays (Inside Container) */}
-                <SquareImage className="absolute left-[-30px] top-[20%] md:flex hidden" />
-                <SquareImage className="absolute right-[-30px] top-0 md:flex hidden" />
-            </div>
-
-            {/* Square Image Overlays (Outside Container) */}
+                <div
+                    className="md:w-1/2 w-full lg:h-3/4 h-1/2 bg-blue-100 relative lg:rounded-bl-[256px] rounded-bl-[128px]">
+                    <Image
+                        src={product3}
+                        alt="Product example text."
+                        className="object-center scale-[0.6]"
+                        fill
+                        priority={true}
+                    />
+                    <SquareImage className="absolute left-[-30px] top-[20%] md:flex hidden" />
+                    <SquareImage className="absolute right-[-30px] top-0 md:flex hidden" />
+                </div>
             <SquareImage className="absolute left-[-30px] top-[20%]" />
             <SquareImage className="absolute left-[-30px] bottom-[20%]" />
             <SquareImage className="absolute right-[-30px] top-[40%]" />

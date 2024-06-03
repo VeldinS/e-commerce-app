@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from "next/image";
+
 import stars0_5 from "@/assets/stars/stars0_5.svg";
 import stars1 from "@/assets/stars/stars1.svg";
 import stars1_5 from "@/assets/stars/stars1_5.svg";
@@ -10,6 +11,7 @@ import stars3_5 from "@/assets/stars/stars3_5.svg";
 import stars4 from "@/assets/stars/stars4.svg";
 import stars4_5 from "@/assets/stars/stars4_5.svg";
 import stars5 from "@/assets/stars/stars5.svg";
+
 
 function Stars({product}) {
     return (

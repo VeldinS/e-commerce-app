@@ -1,7 +1,9 @@
 import React from 'react';
+
 import {ProductTabs} from "@/components/ProductTabs/ProductTabs";
 import SquareImage from "@/components/Squares/SquareImage";
 import RevealComp from "@/components/Animations/reveal";
+
 
 function ProductsCategories() {
     return (

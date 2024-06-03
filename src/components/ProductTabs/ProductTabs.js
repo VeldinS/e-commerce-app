@@ -3,8 +3,10 @@
 import React, {useState} from 'react';
 import {categories, products} from "@/backend/Data";
 import Link from "next/link";
+
 import RevealComp from "@/components/Animations/reveal";
 import Stars from "@/components/Stars/Stars";
+
 
 export function ProductTabs() {
 
@@ -38,7 +40,7 @@ export function ProductTabs() {
                                     <img
                                         src={product.image}
                                         alt={product.name}
-                                        className={'aspect-square scale-75'}
+                                        className={'aspect-square scale-[0.6]'}
                                     />
                                 </div>
                                 <div className="w-full h-auto md:px-8 px-2 md:py-0 py-2 flex flex-col justify-center items-center bg-white md:gap-4 gap-1">

@@ -1,15 +1,17 @@
 'use client'
+
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+
 import SwiperCore from 'swiper';
-import "swiper/css";
-import "swiper/css/navigation";
 import {Autoplay, Navigation} from "swiper/modules";
 
+import "swiper/css";
+import "swiper/css/navigation";
+
+
 SwiperCore.use([Autoplay, Navigation]);
-
 const ImageSlider = ({image1, image2, image3, image4}) => {
-
     return (
         <div className="w-full h-full mx-auto overflow-hidden">
             <Swiper
