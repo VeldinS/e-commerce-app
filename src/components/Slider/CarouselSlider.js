@@ -5,14 +5,9 @@ import SwiperCore from 'swiper';
 import "swiper/css";
 import "swiper/css/navigation";
 import {Autoplay, Navigation} from "swiper/modules";
-import TopRatedCard from "@/components/Cards/TopRated Card/TopRatedCard";
-
-import product1 from "../../assets/product1.png";
-import product2 from "../../assets/product2.png";
-import product3 from "../../assets/product3.png";
-import product4 from "../../assets/product4.png";
 import Link from "next/link";
 import {products} from "@/backend/Data";
+import Stars from "@/components/Stars/Stars";
 
 
 SwiperCore.use([Autoplay, Navigation]);
@@ -39,7 +34,25 @@ const CarouselSlider = () => {
                     {topProducts.map((product, index) => (
                         <SwiperSlide key={index}>
                             <Link href={`/products/${product.id}`}>
-                                <TopRatedCard image={product.previewImg} name={product.name} rating={product.rating} price={product.price} oldPrice={product.oldPrice}/>
+                                <div
+                                    className={'w-auto mr-4 h-auto bg-black flex flex-col xl:justify-start justify-center xl:items-start items-center'}>
+                                    <div className="aspect-square overflow-hidden">
+                                        <img
+                                            src={product.previewImg}
+                                            alt={product.name}
+                                        />
+                                    </div>
+                                    <div
+                                        className="w-full h-auto xl:px-8 px-2 xl:py-6 py-2 flex flex-col justify-center items-start bg-white">
+                                        <Stars product={product}/>
+                                        <h1 className={'font-audiowide text-black xl:text-3xl text-lg leading-normal'}>{product.name}</h1>
+                                        <div
+                                            className={'flex md:flex-row flex-col items-start justify-center md:gap-4 gap:0'}>
+                                            <p className={'font-audiowide xl:text-2xl text-sm text-gray-300 line-through'}>{product.oldPrice}</p>
+                                            <p className={'font-audiowide xl:text-2xl text-sm text-black'}>{product.price}</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </Link>
                         </SwiperSlide>
                     ))}
