@@ -45,9 +45,7 @@ function SellOfDay() {
                         <Countdown/>
                     </RevealComp>
                     <RevealComp delay={'800ms'} threshold={0.5} duration={'300ms'} x={-30}>
-                        <Link href={'/products/3'} link={'/products/3'}>
-                            <ButtonPrimary text={"Check it Out!"} link={`/products/${productData.id}`} />
-                        </Link>
+                        <ButtonPrimary text={"Check it Out!"} link={`/products/${productData.id}`} />
                     </RevealComp>
                 </div>
             </div>
