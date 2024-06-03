@@ -1,5 +1,5 @@
 'use client'
-import React, {useState} from "react";
+import React, from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore from 'swiper';
 import "swiper/css";
