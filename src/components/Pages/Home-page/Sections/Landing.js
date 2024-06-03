@@ -5,7 +5,7 @@ import ButtonPrimary from "@/components/Buttons/ButtonPrimary";
 import SquareImage from "@/components/Squares/SquareImage";
 import RevealComp from "@/components/Animations/reveal";
 
-import product3 from "@/assets/product1Png.png";
+import product3 from "@/assets/productImages/product1Png.png";
 
 
 function Landing() {

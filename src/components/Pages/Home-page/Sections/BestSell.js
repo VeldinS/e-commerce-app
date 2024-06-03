@@ -4,7 +4,7 @@ import Image from "next/image";
 import SquareImage from "@/components/Squares/SquareImage";
 import RevealComp from "@/components/Animations/reveal";
 
-import product4 from "@/assets/product4.png";
+import product4 from "@/assets/productImages/product4.png";
 
 
 function BestSell() {

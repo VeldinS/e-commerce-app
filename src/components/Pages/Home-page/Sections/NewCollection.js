@@ -4,9 +4,9 @@ import NewCollectionCard from "@/components/Cards/NewCollection Card/NewCollecti
 import SquareImage from "@/components/Squares/SquareImage";
 import RevealComp from "@/components/Animations/reveal";
 
-import product1 from "@/assets/product1Png.png";
-import product2 from "@/assets/product3Png.png";
-import product3 from "@/assets/product2Png.png";
+import product1 from "@/assets/productImages/product1Png.png";
+import product2 from "@/assets/productImages/product3Png.png";
+import product3 from "@/assets/productImages/product2Png.png";
 
 
 function NewCollection() {
