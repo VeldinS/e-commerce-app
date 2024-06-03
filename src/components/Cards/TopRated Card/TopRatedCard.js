@@ -17,7 +17,7 @@ function TopRatedCard({image, rating, name, price, oldPrice}) {
     return (
         <div className={'w-auto mr-4 h-auto bg-black flex flex-col xl:justify-start justify-center xl:items-start items-center'}>
             <div className="aspect-square overflow-hidden">
-                <Image
+                <img
                     src={image}
                     alt={name}
                 />

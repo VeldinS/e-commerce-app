@@ -1,4 +1,5 @@
-import './newCollectionCard.css'
+import './newCollectionCard.css';
+
 import React from 'react';
 import Link from "next/link";
 import Image from 'next/image';
