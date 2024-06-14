@@ -1,5 +1,9 @@
+'use client'
+
 import React from "react";
 import Image from "next/image";
+
+import {motion} from "framer-motion";
 
 import ButtonPrimary from "@/components/Buttons/ButtonPrimary";
 import SquareImage from "@/components/Squares/SquareImage";
@@ -10,7 +14,12 @@ import product3 from "@/assets/productImages/product1Png.png";
 
 function Landing() {
     return (
-        <section className="h-screen bg-beige flex flex-col md:flex-row md:justify-between justify-center items-center md:gap-0 gap-8 md:p-0 p-16 overflow-hidden relative xl:px-36 lg:px-24 md:px-18 px-6">
+        <motion.section
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity: 0}}
+            transition={{duration: 1.3}}
+            className="h-screen bg-beige flex flex-col md:flex-row md:justify-between justify-center items-center md:gap-0 gap-8 md:p-0 p-16 overflow-hidden relative xl:px-36 lg:px-24 md:px-18 px-6">
                 <div className="md:w-1/2 w-full flex flex-col md:items-start items-center justify-center md:gap-16 gap-8">
                     <RevealComp delay={'200ms'} duration={'300ms'} threshold={0.3} x={-30}>
                         <div className="flex flex-col md:items-start items-center justify-center gap-2">
@@ -53,7 +62,7 @@ function Landing() {
             <SquareImage className="absolute left-[-30px] bottom-[20%]" />
             <SquareImage className="absolute right-[-30px] top-[40%]" />
             <SquareImage className="absolute right-[-30px] bottom-[10%]" />
-        </section>
+        </motion.section>
     );
 }
 

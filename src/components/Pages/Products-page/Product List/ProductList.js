@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import Image from "next/image";
 import Link from "next/link";
 
+import {motion} from "framer-motion";
+
 import RevealComp from "@/components/Animations/reveal";
 import Stars from "@/components/Stars/Stars";
 
@@ -15,7 +17,12 @@ export function ProductList() {
     const [activeTab, setActiveTab] = useState(0);
 
     return (
-        <div className={'flex flex-col items-center justify-center w-full h-full lg:gap-4 gap-2 lg:py-16 py-8 xl:px-24 lg:px-12 px-2'}>
+        <motion.div
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity: 0}}
+            transition={{duration: 1.3}}
+            className={'flex flex-col items-center justify-center w-full h-full lg:gap-4 gap-2 lg:py-16 py-8 xl:px-24 lg:px-12 px-2'}>
             <div className="flex flex-row md:space-x-4 space-x-0 py-2 items-center bg-white w-full justify-center lg:gap-8 gap-2 flex-wrap sticky top-0 z-10"> {/* Tab Headers */}
                 {categories.map((category, index) => (
                     <RevealComp threshold={0.5} duration={'300ms'} y={-30} key={index}>
@@ -61,6 +68,6 @@ export function ProductList() {
                     <p className={'text-black'}>Loading products...</p>
                 )}
             </div>
-        </div>
+        </motion.div>
     );
 }

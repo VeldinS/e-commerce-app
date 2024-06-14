@@ -1,4 +1,8 @@
+'use client'
+
 import Link from "next/link";
+
+import {motion} from "framer-motion";
 
 import Navbar from "@/components/Navbar/Navbar";
 import ImageSlider from "@/components/Slider/ImageSlider";
@@ -29,7 +33,12 @@ function ProductDetailPage({ params }) {
     return (
         <>
             <Navbar position={'absolute'} visibility={'flex'} buttonText={'CLOSE'} buttonLink={'/products'}/>
-            <section className={'flex lg:flex-row flex-col bg-white w-screen lg:h-screen h-screen'}>
+            <motion.section
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
+                exit={{opacity: 0}}
+                transition={{duration: 1.3}}
+                className={'flex lg:flex-row flex-col bg-white w-screen lg:h-screen h-screen'}>
                 <div style={{backgroundColor: product.color}} className={'lg:w-1/2 w-full lg:h-full h-1/2 flex justify-center items-center relative'}>
                     <ImageSlider image1={product.image} image2={product.image} image3={product.image} image4={product.image}/>
                 </div>
@@ -101,7 +110,7 @@ function ProductDetailPage({ params }) {
                         </Link>
                     </RevealComp>
                 </div>
-            </section>
+            </motion.section>
         </>
     );
 }
