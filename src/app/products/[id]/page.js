@@ -59,7 +59,7 @@ function ProductDetailPage({ params }) {
                             </Link>
                         </RevealComp>
                     </div>
-                    <RevealComp delay={'200ms'} duration={'300ms'} threshold={0} x={-100}>
+                    <RevealComp delay={'200ms'} duration={'300ms'} threshold={0} x={-50}>
                         <Link href={`/products/${productId+1}`}
                               className={'text-[#868686] font-audiowide text-lg tracking-[5px] hidden lg:flex'}
                         >
@@ -80,8 +80,7 @@ function ProductDetailPage({ params }) {
                             </RevealComp>
                             <RevealComp delay={'1400ms'} duration={'300ms'} threshold={0} x={-100}>
                                 <p className={'text-black font-roboto text-md tracking-[2px] md:w-2/3 w-full'}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas orci quis mi
-                                    convallis
+                                    {product.description}
                                 </p>
                             </RevealComp>
                             <div className={'flex flex-row items-start justify-center gap-6'}>
@@ -102,7 +101,7 @@ function ProductDetailPage({ params }) {
                             <ButtonPrimary text={"Add to cart"} link={`https://evgoods.foxycart.com/cart?name=${product.name}&image=${product.previewImg}&price=${product.price}&code=${productId}`}/>
                         </div>
                     </div>
-                    <RevealComp delay={'600ms'} duration={'300ms'} threshold={0} x={-100}>
+                    <RevealComp delay={'600ms'} duration={'300ms'} threshold={0} x={-30}>
                         <Link href={`/products/${productId - 1}`}
                               className={'text-[#868686] font-audiowide text-lg tracking-[5px] hidden lg:flex'}
                         >

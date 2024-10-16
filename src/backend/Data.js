@@ -16,430 +16,114 @@ export const categories = [
         color: '#F4FFBB'
     }
 ];
+
 export const products = {
-    category1: [
-        {
-            id: 1,
-            name: 'Product 1',
-            price: '120KM',
-            oldPrice: '250KM',
-            rating: '1.8',
-            image: 'https://i.ibb.co/5kv5fv4/product1-Png.png',
-            image2: 'https://i.ibb.co/5kv5fv4/product1-Png.png',
-            image3: 'https://i.ibb.co/5kv5fv4/product1-Png.png',
-            image4: 'https://i.ibb.co/5kv5fv4/product1-Png.png',
-            previewImg: 'https://i.ibb.co/HGdKG1k/product1.png',
-            color: '#F4FFBB'
-        },
-        {
-            id: 2,
-            name: 'Product 2',
-            price: '220KM',
-            oldPrice: '300KM',
-            rating: '5.0',
-            image: 'https://i.ibb.co/jV7zyg8/product2-Png.png',
-            image2: 'https://i.ibb.co/jV7zyg8/product2-Png.png',
-            image3: 'https://i.ibb.co/jV7zyg8/product2-Png.png',
-            image4: 'https://i.ibb.co/jV7zyg8/product2-Png.png',
-            previewImg: 'https://i.ibb.co/ZSdqpgg/product2.png',
-            color: '#EAECF1'
-        },
-        {
-            id: 3,
-            name: 'Product 3',
-            price: '100KM',
-            oldPrice: '210KM',
-            rating: '4.1',
-            image: 'https://i.ibb.co/ZJswLmG/product3-Png.png',
-            image2: 'https://i.ibb.co/ZJswLmG/product3-Png.png',
-            image3: 'https://i.ibb.co/ZJswLmG/product3-Png.png',
-            image4: 'https://i.ibb.co/ZJswLmG/product3-Png.png',
-            previewImg: 'https://i.ibb.co/71JNcyf/product3.png',
-            color: '#FFD4D1'
-        },
-        {
-            id: 4,
-            name: 'Product 4',
-            price: '320KM',
-            oldPrice: '450KM',
-            rating: '3.6',
-            image: 'https://i.ibb.co/gWhRpn1/product4-Png.png',
-            image2: 'https://i.ibb.co/gWhRpn1/product4-Png.png',
-            image3: 'https://i.ibb.co/gWhRpn1/product4-Png.png',
-            image4: 'https://i.ibb.co/gWhRpn1/product4-Png.png',
-            previewImg: 'https://i.ibb.co/K72tpzz/product4.png',
-            color: '#CEE3F7'
-        },
-        {
-            id: 5,
-            name: 'Product 5',
-            price: '220KM',
-            oldPrice: '300KM',
-            rating: '4.9',
-            image: 'https://i.ibb.co/jV7zyg8/product2-Png.png',
-            image2: 'https://i.ibb.co/jV7zyg8/product2-Png.png',
-            image3: 'https://i.ibb.co/jV7zyg8/product2-Png.png',
-            image4: 'https://i.ibb.co/jV7zyg8/product2-Png.png',
-            previewImg: 'https://i.ibb.co/ZSdqpgg/product2.png',
-            color: '#F4FFBB',
-            sellOfDay: true
-        },
-        {
-            id: 6,
-            name: 'Product 6',
-            price: '320KM',
-            oldPrice: '450KM',
-            rating: '3.6',
-            image: 'https://i.ibb.co/gWhRpn1/product4-Png.png',
-            image2: 'https://i.ibb.co/gWhRpn1/product4-Png.png',
-            image3: 'https://i.ibb.co/gWhRpn1/product4-Png.png',
-            image4: 'https://i.ibb.co/gWhRpn1/product4-Png.png',
-            previewImg: 'https://i.ibb.co/K72tpzz/product4.png',
-            color: '#CEE3F7'
-        },
-        {
-            id: 7,
-            name: 'Product 7',
-            price: '120KM',
-            oldPrice: '250KM',
-            rating: '5.0',
-            image: 'https://i.ibb.co/5kv5fv4/product1-Png.png',
-            image2: 'https://i.ibb.co/5kv5fv4/product1-Png.png',
-            image3: 'https://i.ibb.co/5kv5fv4/product1-Png.png',
-            image4: 'https://i.ibb.co/5kv5fv4/product1-Png.png',
-            previewImg: 'https://i.ibb.co/HGdKG1k/product1.png',
-            color: '#EAECF1'
-        },
-        {
-            id: 8,
-            name: 'Product 8',
-            price: '100KM',
-            oldPrice: '210KM',
-            rating: '4.9',
-            image: 'https://i.ibb.co/ZJswLmG/product3-Png.png',
-            image2: 'https://i.ibb.co/ZJswLmG/product3-Png.png',
-            image3: 'https://i.ibb.co/ZJswLmG/product3-Png.png',
-            image4: 'https://i.ibb.co/ZJswLmG/product3-Png.png',
-            previewImg: 'https://i.ibb.co/71JNcyf/product3.png',
-            color: '#F4FFBB'
-        },
-    ],
-    category2: [
-        {
-            id: 9,
-            name: 'Product 1',
-            price: '220KM',
-            oldPrice: '300KM',
-            rating: '4.2',
-            image: 'https://i.ibb.co/jV7zyg8/product2-Png.png',
-            image2: 'https://i.ibb.co/jV7zyg8/product2-Png.png',
-            image3: 'https://i.ibb.co/jV7zyg8/product2-Png.png',
-            image4: 'https://i.ibb.co/jV7zyg8/product2-Png.png',
-            previewImg: 'https://i.ibb.co/ZSdqpgg/product2.png',
-            color: '#EAECF1'
-        },
-        {
-            id: 10,
-            name: 'Product 2',
-            price: '320KM',
-            oldPrice: '450KM',
-            rating: '3.6',
-            image: 'https://i.ibb.co/gWhRpn1/product4-Png.png',
-            image2: 'https://i.ibb.co/gWhRpn1/product4-Png.png',
-            image3: 'https://i.ibb.co/gWhRpn1/product4-Png.png',
-            image4: 'https://i.ibb.co/gWhRpn1/product4-Png.png',
-            previewImg: 'https://i.ibb.co/K72tpzz/product4.png',
-            color: '#FFD4D1'
-        },
-        {
-            id: 11,
-            name: 'Product 3',
-            price: '120KM',
-            oldPrice: '250KM',
-            rating: '1.8',
-            image: 'https://i.ibb.co/5kv5fv4/product1-Png.png',
-            image2: 'https://i.ibb.co/5kv5fv4/product1-Png.png',
-            image3: 'https://i.ibb.co/5kv5fv4/product1-Png.png',
-            image4: 'https://i.ibb.co/5kv5fv4/product1-Png.png',
-            previewImg: 'https://i.ibb.co/HGdKG1k/product1.png',
-            color: '#F4FFBB'
-        },
-        {
-            id: 12,
-            name: 'Product 4',
-            price: '100KM',
-            oldPrice: '210KM',
-            rating: '4.9',
-            image: 'https://i.ibb.co/ZJswLmG/product3-Png.png',
-            image2: 'https://i.ibb.co/ZJswLmG/product3-Png.png',
-            image3: 'https://i.ibb.co/ZJswLmG/product3-Png.png',
-            image4: 'https://i.ibb.co/ZJswLmG/product3-Png.png',
-            previewImg: 'https://i.ibb.co/71JNcyf/product3.png',
-            color: '#CEE3F7'
-        },
-        {
-            id: 13,
-            name: 'Product 5',
-            price: '120KM',
-            oldPrice: '250KM',
-            rating: '4.9',
-            image: 'https://i.ibb.co/5kv5fv4/product1-Png.png',
-            image2: 'https://i.ibb.co/5kv5fv4/product1-Png.png',
-            image3: 'https://i.ibb.co/5kv5fv4/product1-Png.png',
-            image4: 'https://i.ibb.co/5kv5fv4/product1-Png.png',
-            previewImg: 'https://i.ibb.co/HGdKG1k/product1.png',
-            color: '#FFD4D1'
-        },
-        {
-            id: 14,
-            name: 'Product 6',
-            price: '220KM',
-            oldPrice: '300KM',
-            rating: '4.2',
-            image: 'https://i.ibb.co/jV7zyg8/product2-Png.png',
-            image2: 'https://i.ibb.co/jV7zyg8/product2-Png.png',
-            image3: 'https://i.ibb.co/jV7zyg8/product2-Png.png',
-            image4: 'https://i.ibb.co/jV7zyg8/product2-Png.png',
-            previewImg: 'https://i.ibb.co/ZSdqpgg/product2.png',
-            color: '#CEE3F7'
-        },
-        {
-            id: 15,
-            name: 'Product 7',
-            price: '100KM',
-            oldPrice: '210KM',
-            rating: '4.9',
-            image: 'https://i.ibb.co/ZJswLmG/product3-Png.png',
-            image2: 'https://i.ibb.co/ZJswLmG/product3-Png.png',
-            image3: 'https://i.ibb.co/ZJswLmG/product3-Png.png',
-            image4: 'https://i.ibb.co/ZJswLmG/product3-Png.png',
-            previewImg: 'https://i.ibb.co/71JNcyf/product3.png',
-            color: '#F4FFBB'
-        },
-        {
-            id: 16,
-            name: 'Product 8',
-            price: '320KM',
-            oldPrice: '450KM',
-            rating: '3.6',
-            image: 'https://i.ibb.co/gWhRpn1/product4-Png.png',
-            image2: 'https://i.ibb.co/gWhRpn1/product4-Png.png',
-            image3: 'https://i.ibb.co/gWhRpn1/product4-Png.png',
-            image4: 'https://i.ibb.co/gWhRpn1/product4-Png.png',
-            previewImg: 'https://i.ibb.co/K72tpzz/product4.png',
-            color: '#EAECF1'
-        },
-    ],
-    category3: [
-        {
-            id: 17,
-            name: 'Product 2',
-            price: '220KM',
-            oldPrice: '300KM',
-            rating: '4.9',
-            image: 'https://i.ibb.co/jV7zyg8/product2-Png.png',
-            image2: 'https://i.ibb.co/jV7zyg8/product2-Png.png',
-            image3: 'https://i.ibb.co/jV7zyg8/product2-Png.png',
-            image4: 'https://i.ibb.co/jV7zyg8/product2-Png.png',
-            previewImg: 'https://i.ibb.co/ZSdqpgg/product2.png',
-            color: '#FFD4D1'
-        },
-        {
-            id: 18,
-            name: 'Product 2',
-            price: '320KM',
-            oldPrice: '450KM',
-            rating: '3.6',
-            image: 'https://i.ibb.co/gWhRpn1/product4-Png.png',
-            image2: 'https://i.ibb.co/gWhRpn1/product4-Png.png',
-            image3: 'https://i.ibb.co/gWhRpn1/product4-Png.png',
-            image4: 'https://i.ibb.co/gWhRpn1/product4-Png.png',
-            previewImg: 'https://i.ibb.co/K72tpzz/product4.png',
-            color: '#CEE3F7'
-        },
-        {
-            id: 19,
-            name: 'Product 3',
-            price: '120KM',
-            oldPrice: '250KM',
-            rating: '1.8',
-            image: 'https://i.ibb.co/5kv5fv4/product1-Png.png',
-            image2: 'https://i.ibb.co/5kv5fv4/product1-Png.png',
-            image3: 'https://i.ibb.co/5kv5fv4/product1-Png.png',
-            image4: 'https://i.ibb.co/5kv5fv4/product1-Png.png',
-            previewImg: 'https://i.ibb.co/HGdKG1k/product1.png',
-            color: '#F4FFBB'
-        },
-        {
-            id: 20,
-            name: 'Product 4',
-            price: '220KM',
-            oldPrice: '300KM',
-            rating: '4.2',
-            image: 'https://i.ibb.co/jV7zyg8/product2-Png.png',
-            image2: 'https://i.ibb.co/jV7zyg8/product2-Png.png',
-            image3: 'https://i.ibb.co/jV7zyg8/product2-Png.png',
-            image4: 'https://i.ibb.co/jV7zyg8/product2-Png.png',
-            previewImg: 'https://i.ibb.co/ZSdqpgg/product2.png',
-            color: '#CEE3F7'
-        },
-        {
-            id: 21,
-            name: 'Product 5',
-            price: '100KM',
-            oldPrice: '210KM',
-            rating: '4.9',
-            image: 'https://i.ibb.co/ZJswLmG/product3-Png.png',
-            image2: 'https://i.ibb.co/ZJswLmG/product3-Png.png',
-            image3: 'https://i.ibb.co/ZJswLmG/product3-Png.png',
-            image4: 'https://i.ibb.co/ZJswLmG/product3-Png.png',
-            previewImg: 'https://i.ibb.co/71JNcyf/product3.png',
-            color: '#EAECF1'
-        },
-        {
-            id: 22,
-            name: 'Product 6',
-            price: '320KM',
-            oldPrice: '450KM',
-            rating: '5.0',
-            image: 'https://i.ibb.co/gWhRpn1/product4-Png.png',
-            image2: 'https://i.ibb.co/gWhRpn1/product4-Png.png',
-            image3: 'https://i.ibb.co/gWhRpn1/product4-Png.png',
-            image4: 'https://i.ibb.co/gWhRpn1/product4-Png.png',
-            previewImg: 'https://i.ibb.co/K72tpzz/product4.png',
-            color: '#FFD4D1'
-        },
-        {
-            id: 23,
-            name: 'Product 7',
-            price: '100KM',
-            oldPrice: '210KM',
-            rating: '4.9',
-            image: 'https://i.ibb.co/ZJswLmG/product3-Png.png',
-            image2: 'https://i.ibb.co/ZJswLmG/product3-Png.png',
-            image3: 'https://i.ibb.co/ZJswLmG/product3-Png.png',
-            image4: 'https://i.ibb.co/ZJswLmG/product3-Png.png',
-            previewImg: 'https://i.ibb.co/71JNcyf/product3.png',
-            color: '#EAECF1'
-        },
-        {
-            id: 24,
-            name: 'Product 8',
-            price: '120KM',
-            oldPrice: '250KM',
-            rating: '1.8',
-            image: 'https://i.ibb.co/5kv5fv4/product1-Png.png',
-            image2: 'https://i.ibb.co/5kv5fv4/product1-Png.png',
-            image3: 'https://i.ibb.co/5kv5fv4/product1-Png.png',
-            image4: 'https://i.ibb.co/5kv5fv4/product1-Png.png',
-            previewImg: 'https://i.ibb.co/HGdKG1k/product1.png',
-            color: '#CEE3F7'
-        },
-    ],
-    category4: [
-        {
-            id: 25,
-            name: 'Product 1',
-            price: '320KM',
-            oldPrice: '450KM',
-            rating: '3.6',
-            image: 'https://i.ibb.co/gWhRpn1/product4-Png.png',
-            image2: 'https://i.ibb.co/gWhRpn1/product4-Png.png',
-            image3: 'https://i.ibb.co/gWhRpn1/product4-Png.png',
-            image4: 'https://i.ibb.co/gWhRpn1/product4-Png.png',
-            previewImg: 'https://i.ibb.co/K72tpzz/product4.png',
-            color: '#EAECF1'
-        },
-        {
-            id: 26,
-            name: 'Product 2',
-            price: '220KM',
-            oldPrice: '300KM',
-            rating: '4.2',
-            image: 'https://i.ibb.co/jV7zyg8/product2-Png.png',
-            image2: 'https://i.ibb.co/jV7zyg8/product2-Png.png',
-            image3: 'https://i.ibb.co/jV7zyg8/product2-Png.png',
-            image4: 'https://i.ibb.co/jV7zyg8/product2-Png.png',
-            previewImg: 'https://i.ibb.co/ZSdqpgg/product2.png',
-            color: '#CEE3F7'
-        },
-        {
-            id: 27,
-            name: 'Product 3',
-            price: '120KM',
-            oldPrice: '250KM',
-            rating: '1.8',
-            image: 'https://i.ibb.co/5kv5fv4/product1-Png.png',
-            image2: 'https://i.ibb.co/5kv5fv4/product1-Png.png',
-            image3: 'https://i.ibb.co/5kv5fv4/product1-Png.png',
-            image4: 'https://i.ibb.co/5kv5fv4/product1-Png.png',
-            previewImg: 'https://i.ibb.co/HGdKG1k/product1.png',
-            color: '#FFD4D1'
-        },
-        {
-            id: 28,
-            name: 'Product 4',
-            price: '100KM',
-            oldPrice: '210KM',
-            rating: '4.9',
-            image: 'https://i.ibb.co/ZJswLmG/product3-Png.png',
-            image2: 'https://i.ibb.co/ZJswLmG/product3-Png.png',
-            image3: 'https://i.ibb.co/ZJswLmG/product3-Png.png',
-            image4: 'https://i.ibb.co/ZJswLmG/product3-Png.png',
-            previewImg: 'https://i.ibb.co/71JNcyf/product3.png',
-            color: '#CEE3F7'
-        },
-        {
-            id: 29,
-            name: 'Product 5',
-            price: '120KM',
-            oldPrice: '250KM',
-            rating: '1.8',
-            image: 'https://i.ibb.co/5kv5fv4/product1-Png.png',
-            image2: 'https://i.ibb.co/5kv5fv4/product1-Png.png',
-            image3: 'https://i.ibb.co/5kv5fv4/product1-Png.png',
-            image4: 'https://i.ibb.co/5kv5fv4/product1-Png.png',
-            previewImg: 'https://i.ibb.co/HGdKG1k/product1.png',
-            color: '#FFD4D1'
-        },
-        {
-            id: 30,
-            name: 'Product 6',
-            price: '220KM',
-            oldPrice: '300KM',
-            rating: '4.2',
-            image: 'https://i.ibb.co/jV7zyg8/product2-Png.png',
-            image2: 'https://i.ibb.co/jV7zyg8/product2-Png.png',
-            image3: 'https://i.ibb.co/jV7zyg8/product2-Png.png',
-            image4: 'https://i.ibb.co/jV7zyg8/product2-Png.png',
-            previewImg: 'https://i.ibb.co/ZSdqpgg/product2.png',
-            color: '#CEE3F7'
-        },
-        {
-            id: 31,
-            name: 'Product 7',
-            price: '100KM',
-            oldPrice: '210KM',
-            rating: '4.9',
-            image: 'https://i.ibb.co/ZJswLmG/product3-Png.png',
-            image2: 'https://i.ibb.co/ZJswLmG/product3-Png.png',
-            image3: 'https://i.ibb.co/ZJswLmG/product3-Png.png',
-            image4: 'https://i.ibb.co/ZJswLmG/product3-Png.png',
-            previewImg: 'https://i.ibb.co/71JNcyf/product3.png',
-            color: '#F4FFBB'
-        },
-        {
-            id: 32,
-            name: 'Product 8',
-            price: '320KM',
-            oldPrice: '450KM',
-            rating: '3.6',
-            image: 'https://i.ibb.co/gWhRpn1/product4-Png.png',
-            image2: 'https://i.ibb.co/gWhRpn1/product4-Png.png',
-            image3: 'https://i.ibb.co/gWhRpn1/product4-Png.png',
-            image4: 'https://i.ibb.co/gWhRpn1/product4-Png.png',
-            previewImg: 'https://i.ibb.co/K72tpzz/product4.png',
-            color: '#EAECF1'
-        },
-    ]
+    category1: [],
+    category2: [],
+    category3: [],
+    category4: [],
+};
+
+function generateRandomDescription(productName) {
+    const descriptions = [
+        "A must-have for any household.",
+        "This is the perfect gift for any occasion.",
+        "Get yours today and experience the difference!",
+        "Made with high-quality materials and built to last.",
+        "Don't miss out on this amazing product!",
+    ];
+
+    let randomIndex = Math.floor(Math.random() * descriptions.length);
+    return descriptions[randomIndex].replace(/any/g, productName.toLowerCase());
 }
+
+function generateRandomProduct(categoryId, startId) {
+    const productNames = [
+        "T-Shirt",
+        "Sweatshirt",
+        "Hat",
+        "Mug",
+        "Phone Case",
+        "Laptop Sleeve",
+        "Water Bottle",
+        "Backpack",
+        "Wallet",
+        "Watch",
+        "Shoes",
+        "Sunglasses",
+        "Jewelry",
+        "Speaker",
+        "Headphones",
+        "Charger",
+        "Power Bank",
+        "Desk Lamp",
+        "Notebook",
+        "Pen",
+        "Book",
+        "Toy",
+        "Pet Accessory",
+        "Plant",
+        "Decoration",
+        "Tool",
+    ];
+
+    let id = startId;
+    let randomIndex = Math.floor(Math.random() * productNames.length);
+    let name = productNames[randomIndex];
+    let price = Math.floor(Math.random() * (200 - 50) + 50) + "KM";
+    let oldPrice = Math.floor(Math.random() * (200 - 50) + 50) * 2 + "KM";
+    let rating = (Math.random() * 5).toFixed(1);
+
+    // List of images to choose from
+    const images = [
+        'https://i.ibb.co/5kv5fv4/product1-Png.png',
+        'https://i.ibb.co/jV7zyg8/product2-Png.png',
+        'https://i.ibb.co/ZJswLmG/product3-Png.png',
+        'https://i.ibb.co/gWhRpn1/product4-Png.png'
+    ];
+
+    // Randomly assign the same image to all image properties
+    let randomImageIndex = Math.floor(Math.random() * images.length);
+    let selectedImage = images[randomImageIndex];
+
+    let color = randomColor();
+    let description = generateRandomDescription(name);
+
+    let product = {
+        id: id++,
+        name: name,
+        price: price,
+        oldPrice: oldPrice,
+        rating: rating,
+        image: selectedImage,
+        image2: selectedImage,
+        previewImg: selectedImage,
+        color: color,
+        description: description,
+    };
+
+    // Randomly assign sellOfDay to one product
+    if (Math.random() < 0.1) {
+        product.sellOfDay = true;
+    }
+
+    return product;
+}
+
+function randomColor() {
+    const colors = ["#F4FFBB", "#CEE3F7", "#FFD4D1", "#EAECF1"];
+    return colors[Math.floor(Math.random() * colors.length)];
+}
+
+// Generate products for each category
+let totalProducts = 0;
+while (totalProducts < 150) {
+    for (let i = 0; i < 37; i++) { // Adjust number of products per category to reach 150 total
+        let category = Object.keys(products)[Math.floor(Math.random() * Object.keys(products).length)];
+        let product = generateRandomProduct(category, totalProducts + 1);
+        products[category].push(product);
+        totalProducts++;
+    }
+}
+
+console.log(products); // This line can be removed to avoid printing the data in the console
